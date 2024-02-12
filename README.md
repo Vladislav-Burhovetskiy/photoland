@@ -1,8 +1,12 @@
-# React + Vite
+# PHOTOLAND
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Photoland it is Photo Cameras E-Commerce Web App based on React.js | React Router 6
 
-Currently, two official plugins are available:
+Quick start:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+```
+$ npm install
+$ npm run dev
+```
+
+Happy Coding!
