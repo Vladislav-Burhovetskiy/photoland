@@ -1,0 +1,319 @@
+{
+  "cameras": [
+    {
+      "id": 1,
+      "title": "Nikon D850 Camera DSLR 45.7MP CMOS Body",
+      "price": 2190,
+      "image": "https://firebasestorage.googleapis.com/v0/b/photoland-dd0b3.appspot.com/o/dslr%2F1.png?alt=media&token=e0bee00a-2a1f-48dd-9f59-e0717cbfd12f",
+      "isNew": true,
+      "categories": "dslr",
+      "description": [
+        "45.7MP FX-Format BSI CMOS Sensor; EXPEED 5 Image Processor;",
+        "3.2” 2.36m-Dot Tilting Touchscreen LCD; 4K UHD Video Recording at 30 fps;",
+        "Multi-CAM 20K 153-Point AF System & Native ISO: 64-25600,Extended: 32-102400;",
+        "7 fps Shooting for 51 Frames with AE/AF; 8K Time-Lapse, Negative Digitizer Mode;",
+        "180k-Pixel RGB Sensor, Focus Shift Mode; SnapBridge Bluetooth and Wi-Fi;"
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Canon EOS 6D Mark II Camera DSLR 26.2MP CMOS Body",
+      "price": 1550,
+      "image": "https://firebasestorage.googleapis.com/v0/b/photoland-dd0b3.appspot.com/o/dslr%2F1.png?alt=media&token=e0bee00a-2a1f-48dd-9f59-e0717cbfd12f",
+      "isNew": false,
+      "categories": "dslr",
+      "description": [
+        "26.2 Megapixel full frame CMOS sensorOptical viewfinder with a 45 point all cross type AF system;",
+        "Compatible Lenses: Canon EF lenses (excluding EF S and EF M lenses);",
+        "Dual Pixel CMOS AF with phase detection and Full HD 60pDIGIC 7 Image Processor;",
+        "GPS, Wi-Fi, NFC and Bluetooth low energyVary;",
+        "Angle touch screen, 3.0 inch LCDStandard Power Supply: Battery Pack LP E6N, LP E6;"
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Nikon D7500 Camera DSLR 20.9MP CMOS 4K Kit 18-140 mm",
+      "price": 969,
+      "image": "https://firebasestorage.googleapis.com/v0/b/photoland-dd0b3.appspot.com/o/dslr%2F3.png?alt=media&token=e3be3eb8-43fb-42d7-849f-bdbbf402e1ed",
+      "isNew": true,
+      "categories": "dslr",
+      "description": [
+        "Excel in low light with ISO 100-51200 extendable up to ISO 1640000 (equivalent);",
+        "20.9 MP DX-format sensor Expeed 5; 4K/UHD video footage;",
+        "51-point AF system will track your subject, lock onto it and keep it in focus;",
+        "D7500 camera body, 18-140 mm VR lens, AN-DC3 strap, BF-1B body cap;",
+        "DK-28 eyepiece adapter, EN-EL15a li-ion battery, MH-25a battery charger, UC-E20 USB cable;"
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Canon EOS 250D Kit with Camera Lens EF-S 18-55mm DC Black",
+      "price": 564,
+      "image": "https://firebasestorage.googleapis.com/v0/b/photoland-dd0b3.appspot.com/o/dslr%2F4.png?alt=media&token=ee1342d8-8d1b-459a-8925-23837f4e96a7",
+      "isNew": false,
+      "categories": "dslr",
+      "description": [
+        "24.1MP APS-C CMOS Sensor; DIGIC 8 Image Processor;",
+        "3.0” 1.04m-Dot Vari-Angle Touchscreen; ISO 100-25600;",
+        "UHD 4K24p Video and 4K Time-Lapse Movie; 9-Point AF System;",
+        "Dual Pixel CMOS AF; Up to 5 fps Shooting;",
+        "Bundle Includes: Canon EOS 250D DSLR Camera with 18-55mm Lens (Black), EOS Bag, Sandisk Ultra 64GB Card, Cleaning Set;"
+      ]
+    },
+    {
+      "id": 5,
+      "title": "Canon EOS 2000D Camera DSLR 24.1MP CMOS Kit with Camera Lens EF-S 18-55mm f/3.5-5.6 III Black",
+      "price": 439,
+      "image": "https://firebasestorage.googleapis.com/v0/b/photoland-dd0b3.appspot.com/o/dslr%2F5.png?alt=media&token=862670ea-7c13-451a-aa93-7740109619dd",
+      "isNew": true,
+      "categories": "dslr",
+      "description": [
+        "2x SanDisk 32GB SDHC Memory Card, Extended Life Replacement Battery (LP-E10);",
+        "0.43x HD Wide Angle Macro Lens Attachment 2.2x HD Telephoto Lens Attachment;",
+        "4PC Close-Up HD Macro Lenses (+1, +2, +4, +10), 50” Professional Tripod;",
+        "3PC Multi Coated HD Filter Set (UV, CPL, FLD);",
+        "Digital Slave Flash with Bracket Wired Shutter Remote (RS-60E3);"
+      ]
+    },
+    {
+      "id": 6,
+      "title": "Sigma FP Digital Camera Full Frame 24.6MP Body",
+      "price": 1499,
+      "image": "https://firebasestorage.googleapis.com/v0/b/photoland-dd0b3.appspot.com/o/professional%2F1.png?alt=media&token=9e38d17c-5882-4d78-9a8f-8b6def27fa28",
+      "isNew": false,
+      "categories": "professional",
+      "description": [
+        "World's smallest and lightest full-frame camera; Back-illuminated 35mm full-frame image sensor with 24.6 effective megapixels;",
+        "Robust & lightweight aluminum body; Dust- and- splash-proof structure;",
+        "Supports UHD 4K/24, 25 & 30 fps; Supports 12-bit Cinema DNG;",
+        "Full-time electronic shutter; Continuous shooting up 18 FPS;",
+        "Face/Eye Detection AF; HDR Shooting;"
+      ]
+    },
+    {
+      "id": 7,
+      "title": "Sony A7 III Body Photo Camera Mirrorless 24MP Full Frame 4K",
+      "price": 1295,
+      "image": "https://firebasestorage.googleapis.com/v0/b/photoland-dd0b3.appspot.com/o/mirrorless%2F1.png?alt=media&token=13225516-698e-4d83-a5fa-7383b7bbf8f8",
+      "isNew": true,
+      "categories": "mirrorless",
+      "description": [
+        "Advanced 24.2MP BSI full frame Image Sensor w/ 1.8X readout speed;",
+        "Aspect Ratio - 3:2, Headphone Terminal : Yes (3.5 mm Stereo minijack), Mic Terminal : Yes (3.5 mm Stereo minijack);",
+        "15 stop dynamic range, 14 bit uncompressed RAW, ISO 50 to 204,800. Compatible with Sony E mount lenses;",
+        "Up to 10fps silent or mechanical shutter with AE/AF tracking;",
+        "693 phase detection / 425 contrast AF points w/ 93 percent image coverage. Focus sensor: Exmor R CMOS sensor;"
+      ]
+    },
+    {
+      "id": 8,
+      "title": "Canon EOS R6 Photo Camera Mirrorless Full-Frame 20.1 M",
+      "price": 1599,
+      "image": "https://firebasestorage.googleapis.com/v0/b/photoland-dd0b3.appspot.com/o/mirrorless%2F2.png?alt=media&token=7f303f8a-72b5-4f0b-9060-d4eec5622266",
+      "isNew": false,
+      "categories": "mirrorless",
+      "description": [
+        "High Image Quality featuring a New 20 Megapixel Full-frame CMOS Sensor;",
+        "DIGIC X Image Processor with an ISO range of 100-102400; Expandable to 204800;",
+        "High-speed continuous shooting of up to 12 fps with Mechanical Shutter and up to 20 fps electronic (silent) shutter;",
+        "Dual pixel CMOS AF covering approx. 100% area with 1,053 AF areas;",
+        "Video capture resolution: 4K UHD 2160p;"
+      ]
+    },
+    {
+      "id": 9,
+      "title": "Canon EOS M50 II Photo Camera Mirrorless 24MP Kit with Camera Lens EF-M 15-45mm F/3.5-6.3 IS STM Black",
+      "price": 645,
+      "image": "https://firebasestorage.googleapis.com/v0/b/photoland-dd0b3.appspot.com/o/mirrorless%2F3.png?alt=media&token=6fd81186-52fc-4954-8d0d-921598f3b38e",
+      "isNew": false,
+      "categories": "mirrorless",
+      "description": [
+        "24.1 megapixel (aps-c) cmos sensor with iso 100-25600 (h: 51200);",
+        "Digic 8 image processor with auto lighting optimizer; Video capture resolution: 2160p;",
+        "Improved dual pixel cmos af and eye detection af (still/movie servo af support);",
+        "Vari-angle touchscreen lcd convenient for vlogging and various composition;",
+        "4k uhd 24p and hd 120p for slow motion; Video capture resolution: 2160p;"
+      ]
+    },
+    {
+      "id": 10,
+      "title": "Canon EOS R6 Mark II Photo Camera Mirrorless Full Frame 24.2MP Body Black",
+      "price": 2299,
+      "image": "https://firebasestorage.googleapis.com/v0/b/photoland-dd0b3.appspot.com/o/mirrorless%2F4.png?alt=media&token=4a9fc66e-7186-4f78-9b65-d61b60970bd3",
+      "isNew": false,
+      "categories": "mirrorless",
+      "description": [
+        "24.2 effective megapixels (approx.) with Dual Pixel CMOS AF);",
+        "Electronic shutter speeds of up to 40 fps at 20MP;",
+        "6 hours of continuous Full-HD video recording;",
+        "Capture 6K oversampled uncropped 4K movies up to 60 fps or Full-HD high-frame rate movie recording at up to 180 fps without overheating;",
+        "Built-in 5GHz Wi-Fi, and Bluetooth 5 technology;"
+      ]
+    },
+    {
+      "id": 11,
+      "title": "Panasonic LUMIX S5 II Photo Camera Mirrorless Full Frame 24.2MP",
+      "price": 2097,
+      "image": "https://firebasestorage.googleapis.com/v0/b/photoland-dd0b3.appspot.com/o/mirrorless%2F5.png?alt=media&token=cdd21653-6a1e-4b15-99c2-dc8097cab971",
+      "isNew": true,
+      "categories": "mirrorless",
+      "description": [
+        "24.2MP Full-Frame CMOS Sensor, 6K30p 4:2:0 10-Bit Video Recording;",
+        "C4K/4K60p 4:2:2 10-Bit Unlimited, 3.68m-Dot 0.78x-Magnification OLED LVF, 3.0” 1.84m-Dot Tilt/Free-Angle Touch-LCD;",
+        "779-Point Phase-Detection AF System; Dual UHS-II SD Slots;",
+        "5-Axis Sensor-Shift Image Stabilization, ISO 100-51200, up to 30 fps Shooting;",
+        "Wi-Fi & Bluetooth, Weather-Sealed Construction;"
+      ]
+    },
+    {
+      "id": 12,
+      "title": "Sony Cyber-shot DSC-RX10 IV Photo Camera Compact 20.1MP Wi-Fi Bluetooth Black",
+      "price": 1100,
+      "image": "https://firebasestorage.googleapis.com/v0/b/photoland-dd0b3.appspot.com/o/compact%2F1.png?alt=media&token=b315e270-fbd7-419f-bc92-e0bde6c8962e",
+      "isNew": true,
+      "categories": "compact",
+      "description": [
+        "World’s Fastest AF acquisition speed of 0.03 sec;",
+        "315 phase-detection AF points covering Approx. 65% of the frame;",
+        "ZEISS Vario-Sonnar T 24-600mm3 F2.4-F4 ultra-zoom Lens;",
+        "20.1 MP 1” back Illuminated Exmor RS stacked CMOS sensor w/ DRAM;",
+        "24 Fps4 continuous shooting up to 249 frames with AF/AE tracking. Filter diameter:62 mm;"
+      ]
+    },
+    {
+      "id": 13,
+      "title": "Sony Cyber-Shot DSC-RX100 VA - Photo Camera, 20,1 MP, Zoom Optic, 2.9x, ZEISS Vario-Sonnar",
+      "price": 799,
+      "image": "https://firebasestorage.googleapis.com/v0/b/photoland-dd0b3.appspot.com/o/compact%2F2.png?alt=media&token=19436a63-8eb0-4c35-82cc-a96854a6c546",
+      "isNew": true,
+      "categories": "compact",
+      "description": [
+        "Shoot up to 24fps with 0.05s auto focus and wide 315 phase-detection AF points;",
+        "The RX100V uses a stacked back illuminated CMOS sensor with BIONZ X processor;",
+        "View & play back your photos with the RX1005 electronic OLED Tru-Finder;",
+        "Connect DSCRX100M5 cameras by NFC or QR codes over wifi to transfer photo & video;",
+        "Operating Temprature: 0 degrees C. minus plus 40 degrees C. / 32 degrees F. - 104 degrees F."
+      ]
+    },
+    {
+      "id": 14,
+      "title": "Panasonic Lumix FZ1000 II Photo Camera Bridge 20.1 MP Zoom 16x 4K Black",
+      "price": 418,
+      "image": "https://firebasestorage.googleapis.com/v0/b/photoland-dd0b3.appspot.com/o/compact%2F3.png?alt=media&token=7a4ed526-baf5-4b86-ab76-c4fb780a83ba",
+      "isNew": false,
+      "categories": "compact",
+      "description": [
+        "Large sensor 1 inch 20. 1MP MOS sensor provides excellent low light and color;",
+        "Leica DC VARIO ELMARIT 16x optical zoom Leica DC VARIO ELMARIT F2. 8 F4. 0 lenses;",
+        "5 Axis Hybrid O. I. S. Optical image Stabilizer. I. S.;",
+        "4K video & 4K PHOTO QFHD 4K video in 3840x2160 30P or 24P in MP4. 4K PHOTO 30 fps in 8MP;",
+        "Camera body viewfinder and display high speed (2, 360k dot) OLED live view Finder, Plus 3. 0 Inch (1, 240k dot);"
+      ]
+    },
+    {
+      "id": 15,
+      "title": "Nikon Coolpix P1000 Photo Camera Bridge 16MP Black",
+      "price": 769,
+      "image": "https://firebasestorage.googleapis.com/v0/b/photoland-dd0b3.appspot.com/o/compact%2F4.png?alt=media&token=d7f4a3a6-a3c8-4cab-a9b3-2756192e418d",
+      "isNew": true,
+      "categories": "compact",
+      "description": [
+        "3000 millimeter optical zoom-the most powerful zoom lens; Ever put on a Nikon Coolpix camera;",
+        "4k ultra hd video with HDMI out, stereo sound and an accessory hot shoe;",
+        "Shooting speed at full resolution: Up to 7 shots at approx. 7 frames per second;",
+        "Focus range: W:: Approx. 1 feet (30 centimeter) to infinity, T:: Approx. 23 feet (7.0 meter) to infinity;",
+        "Macro close up mode: Approx. 0.4 inches (1 centimeter) (wide angle position), Approx. 23 feet (7.0 meter) (telephoto position);"
+      ]
+    },
+    {
+      "id": 16,
+      "title": "Olympus TG-6 Photo Camera Compact Subacvatic 12MP 4K Black",
+      "price": 499,
+      "image": "https://firebasestorage.googleapis.com/v0/b/photoland-dd0b3.appspot.com/o/compact%2F5.png?alt=media&token=b5b54dd5-2b46-43ab-89b1-dad922795d24",
+      "isNew": true,
+      "categories": "compact",
+      "description": [
+        "12MP BSI CMOS Sensor; Olympus 4x Optical Zoom f/2 Lens;",
+        "3.0” 1.04m-Dot LCD Monitor; 4K Video Recording and Full HD at 120p;",
+        "ISO 12800 and up to 20-fps Shooting; TruePic VIII Image Processor;",
+        "25-100mm (35mm Equivalent); Water, Crush, Shock, Freeze & Dustproof;",
+        "Built-In Wi-Fi, GPS, Field Sensor System; Pro Capture Mode & Variable Macro System;"
+      ]
+    },
+    {
+      "id": 17,
+      "title": "Fujifilm Instax Mini 90 Neo Classic Photo Camera Instant Black",
+      "price": 209,
+      "image": "https://firebasestorage.googleapis.com/v0/b/photoland-dd0b3.appspot.com/o/film%2F1.png?alt=media&token=0bef6c58-7b08-4e37-a884-7f0d4da73b8e",
+      "isNew": false,
+      "categories": "film",
+      "description": [
+        "Accepts INSTAX Mini Instant Film; Produces Credit Card-Sized Prints;",
+        "FUJINON 60mm f/12.7 Lens; Optical Viewfinder with Target Spot;",
+        "Bulb and Double Exposure Functions; Kids, Landscape, and Macro Modes;",
+        "Flash Mode Built-in Flash Battery Power NP-45A Shooting Modes;",
+        "Kit Includes Fujifilm Instax Mini Instant Film, 10 Sheets x 5 packs + Case;"
+      ]
+    },
+    {
+      "id": 18,
+      "title": "Fujifilm Instax Wide 300 Photo Camera Instant",
+      "price": 135,
+      "image": "https://firebasestorage.googleapis.com/v0/b/photoland-dd0b3.appspot.com/o/film%2F2.png?alt=media&token=13169100-a7c6-4d17-95fa-25262aa53919",
+      "isNew": false,
+      "categories": "film",
+      "description": [
+        "Automatic extending 95 millimeter f14 lens with two focus zones (0.9m to 3m and 3m to infinity);",
+        "Shutter release - Programmed electronic shutter release, 1/64 sec - 1/200 sec;",
+        "Optical viewfinder. Tri-pod socket. Four size AA 1.5 V alkaline batteries;",
+        "Picture size 62mm × 99mm, close-up lens for shots up to 40cm from the subject;",
+        "Works with Fujifilm Instax Wide Film only - ISO800. Film size: 3.38 x 4.25(inches), picture size: 2.44 x 3.9 (inches);"
+      ]
+    },
+    {
+      "id": 19,
+      "title": "Agfaphoto Photo Camera Analog 35mm Reusable Black",
+      "price": 37,
+      "image": "https://firebasestorage.googleapis.com/v0/b/photoland-dd0b3.appspot.com/o/film%2F3.png?alt=media&token=fc654d80-5816-4e49-8161-6c606c893f37",
+      "isNew": false,
+      "categories": "film",
+      "description": [
+        "Half-frame film camera for colour and B/W films; Retro design;",
+        "Suitable for all ISO 200/400/800 35mm films; With built-in flash;",
+        "Optical lens: 31mm, F=9, focus free; Shutter Speed: 1/120s;",
+        "Shoots two images per standard exposure on a 35mm film roll",
+        "Includes bag & carrying strap; Runs on 1x AAA battery or NiMH battery;"
+      ]
+    },
+    {
+      "id": 20,
+      "title": "Fujifilm Instax Mini 40 Photo Camera Instant Black",
+      "price": 89,
+      "image": "https://firebasestorage.googleapis.com/v0/b/photoland-dd0b3.appspot.com/o/film%2F4.png?alt=media&token=8d8a52f0-8e2b-4400-9d2f-64ced44f0c95",
+      "isNew": false,
+      "categories": "film",
+      "description": [
+        "Classic, deluxe design with premium silver accents;",
+        "Built-in automatic exposure for ideal pictures every time;",
+        "Built-in one-touch selfie mode and selfie mirror;",
+        "Uses INSTAX MINI instant film only; Produces instant print, credit card sized 2” x 3” photos",
+        "Includes: INSTAX MINI 40 instant camera, hand strap, user manual, 2 AA batteries;"
+      ]
+    },
+    {
+      "id": 21,
+      "title": "Fujifilm Instax Mini Evo Hybrid Photo Camera Instant",
+      "price": 239,
+      "image": "https://firebasestorage.googleapis.com/v0/b/photoland-dd0b3.appspot.com/o/film%2F5.png?alt=media&token=7a9a72d3-f9f9-412a-896b-80f920eb442b",
+      "isNew": false,
+      "categories": "film",
+      "description": [
+        "Hybrid instant film camera; Save images to a microSD card;",
+        "10 Lens x 10 Film Effect Options = 100 Ways of Expression",
+        "Built-in selfie mirror so you’re perfectly framed for a selfie, Dual shutter buttons – portrait and landscape;",
+        "Save printed images onto your Smartphone, remote shooting with INSTAX MINI EVO App;",
+        "Prints high-quality, 2” x 3” INSTAX MINI instant photos;"
+      ]
+    }
+  ]
+}
