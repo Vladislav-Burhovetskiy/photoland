@@ -2,7 +2,7 @@
 // import viteLogo from '/vite.svg'
 import { BrowserRouter } from "react-router-dom";
 import MyRoutes from "./routes/MyRoutes";
-import "./App.css";
+import "./App.scss";
 
 function App() {
   return (
