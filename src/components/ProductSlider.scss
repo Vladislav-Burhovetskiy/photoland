@@ -10,3 +10,26 @@
 //     max-width: 1440px;
 //   }
 // }
+
+.mainSlider {
+  .swiper-pagination-bullets {
+    bottom: 1.5rem;
+  }
+}
+
+.mainSlider, .productSlider {
+  .swiper-pagination-bullet {
+    background: #f6cd46;
+  }
+}
+
+.productSlider {
+  .swiper-button-prev::after,
+  .swiper-button-next::after {
+    font-size: 2rem;
+    color: #f6cd46;
+    padding: 2rem;
+    width: 200px;
+  }
+}
+

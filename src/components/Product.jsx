@@ -4,9 +4,9 @@ import "./Product.scss";
 
 export default function Product({ camera }) {
   return (
-    <Link>
+    <Link to={`products/${camera.id}`}>
       <div className="product">
-        {/* image */}
+        <div className="product-badge">NEW</div>
         <div className="product-image__container">
           <img
             className="product-image"
@@ -14,7 +14,13 @@ export default function Product({ camera }) {
             alt={camera.title}
           />
         </div>
-        {camera.title}
+        <div className="product-info">
+          <p className="product-info__categories">{camera.categories}</p>
+          <p className="product-info__title">
+            {camera.title.substring(0, 35)}...
+          </p>
+          <p className="product-info__price">$ {camera.price}</p>
+        </div>
       </div>
     </Link>
   );

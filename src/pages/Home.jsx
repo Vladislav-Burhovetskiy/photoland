@@ -1,13 +1,14 @@
-import ProductSlider from "../components/ProductSlider";
+import LatestProducts from "../components/LatestProducts";
 import useFetch from "../hooks/useFetch";
+import "./Home.scss"
 
 export default function Home() {
   const { data } = useFetch("./api/cameras.json");
   console.log(data);
 
   return (
-    <div>
-      <ProductSlider data={data}/>
-    </div>
+    <section className="home">
+      <LatestProducts data={data} />
+    </section>
   );
 }
