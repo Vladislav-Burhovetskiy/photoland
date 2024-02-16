@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-import ProductSlider from "./ProductSlider";
+import ProductSlider from "../ProductSlider/ProductSlider";
 import "./LatestProducts.scss"
 
 export default function LatestProducts({ data }) {

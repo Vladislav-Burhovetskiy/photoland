@@ -1,5 +1,5 @@
-import LatestProducts from "../components/LatestProducts";
-import useFetch from "../hooks/useFetch";
+import LatestProducts from "../../components/LatestProducts/LatestProducts";
+import useFetch from "../../hooks/useFetch";
 import "./Home.scss"
 
 export default function Home() {

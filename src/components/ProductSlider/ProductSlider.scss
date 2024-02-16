@@ -10,6 +10,7 @@
 //     max-width: 1440px;
 //   }
 // }
+@import "../../utils/styles/vars.scss";
 
 .mainSlider {
   .swiper-pagination-bullets {
@@ -19,7 +20,7 @@
 
 .mainSlider, .productSlider {
   .swiper-pagination-bullet {
-    background: #f6cd46;
+    background: $color-accent;
   }
 }
 
@@ -27,7 +28,7 @@
   .swiper-button-prev::after,
   .swiper-button-next::after {
     font-size: 2rem;
-    color: #f6cd46;
+    color: $color-accent;
     padding: 2rem;
     width: 200px;
   }

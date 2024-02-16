@@ -1,9 +1,9 @@
 import { Route, Routes } from "react-router-dom";
-import Layout from "../components/Layout";
-import Home from "../pages/Home";
-import Products from "../pages/Products";
-import ProductDetails from "../pages/ProductDetails";
-import Search from "../pages/Search";
+import Layout from "../components/Layout/Layout";
+import Home from "../pages/Home/Home";
+import Products from "../pages/Products/Products";
+import ProductDetails from "../pages/ProductDetails/ProductDetails";
+import Search from "../pages/Search/Search";
 
 export default function MyRoutes() {
   return (
