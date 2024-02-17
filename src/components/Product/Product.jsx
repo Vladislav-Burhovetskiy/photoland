@@ -19,7 +19,7 @@ export default function Product({ camera }) {
           <p className="product-info__title">
             {camera.title.substring(0, 35)}...
           </p>
-          <p className="product-info__price">$ {camera.price}</p>
+          <p className="product-info__price">${camera.price}</p>
         </div>
       </div>
     </Link>

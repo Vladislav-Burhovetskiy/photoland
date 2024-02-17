@@ -5,6 +5,18 @@
 //   }
 // }
 
+@mixin onLargeMobile {
+  @media (min-width: 480px) {
+    @content;
+  }
+}
+
+@mixin onSmallTablet {
+  @media (min-width: 600px) {
+    @content;
+  }
+}
+
 @mixin onTablet {
   @media (min-width: 768px) {
     @content;
@@ -13,6 +25,12 @@
 
 @mixin onDesktop {
   @media (min-width: 1024px) {
+    @content;
+  }
+}
+
+@mixin onLargeDesktop {
+  @media (min-width: 1280px) {
     @content;
   }
 }

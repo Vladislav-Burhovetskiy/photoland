@@ -13,21 +13,21 @@ export default function ProductSlider({ data }) {
       modules={[Navigation, Pagination]}
       loop={false}
       navigation={true}
-      spaceBetween={30}
+      spaceBetween={28}
       breakpoints={{
         320: {
           slidesPerView: 1,
         },
-        560: {
+        480: {
           slidesPerView: 2,
         },
-        780: {
+        768: {
           slidesPerView: 3,
         },
-        1020: {
+        1024: {
           slidesPerView: 4,
         },
-        1260: {
+        1280: {
           slidesPerView: 5,
         },
       }}

@@ -1,5 +1,7 @@
+@import "./utils/styles/normalize.scss";
 @import "./utils/styles/vars.scss";
 @import "./utils/styles/mixins.scss";
+@import "./utils/styles/container.scss";
 
 :root {
   font-family: $font-text;
@@ -14,14 +16,6 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-p,
-h1,
-h2,
-h3 {
-  margin: 0;
-  padding: 0;
-}
-
 a {
   font-weight: 500;
   color: #646cff;
@@ -33,11 +27,8 @@ a:hover {
 }
 
 body {
-  margin: 0;
-  display: flex;
-  place-items: center;
   min-width: 320px;
-  // min-height: 100vh;
+  margin: 0 auto;
 }
 
 h1 {

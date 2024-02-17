@@ -1,4 +1,5 @@
 import LatestProducts from "../../components/LatestProducts/LatestProducts";
+import Hero from "../../components/Hero/Hero";
 import useFetch from "../../hooks/useFetch";
 import "./Home.scss"
 
@@ -7,7 +8,8 @@ export default function Home() {
   console.log(data);
 
   return (
-    <section className="home">
+    <section className="home container">
+      <Hero />
       <LatestProducts data={data} />
     </section>
   );

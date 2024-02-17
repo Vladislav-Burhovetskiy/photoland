@@ -2,7 +2,7 @@
 
 .product {
   position: relative;
-  height: 360px;
+  height: 355px;
   background-image: linear-gradient(to top, #1f2126, #33363d);
   box-shadow: 0 0 2rem rgba(0, 0, 0, 0.15);
   border-radius: 8px;
@@ -17,14 +17,14 @@
     background-color: $color-accent;
     font-size: 12px;
     font-weight: bold;
-    padding: 3px 8px;
+    padding: 2.5px 8px;
     border-radius: 8px;
   }
 
   &-image__container {
-    width: 160px;
-    height: 160px;
-    margin: 25px auto 15px;
+    width: 158px;
+    height: 158px;
+    margin: 30px auto 10px;
     // margin: 20px auto;
 
     &:hover {
@@ -41,7 +41,7 @@
     color: #f6cd46;
     font-size: 15px;
     text-align: left;
-    margin-left: 15px;
+    margin: 0 15px;
 
     &__categories {
       font-size: 14px;
