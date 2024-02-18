@@ -1,0 +1,38 @@
+@import "../../utils/styles/vars.scss";
+@import "../../utils/styles/mixins.scss";
+
+.nav {
+  height: 460px;
+  min-width: 280px;
+  width: 100%;
+  background: $color-dark;
+  border-radius: 8px;
+  font-size: 14px;
+  // display: none;
+
+  // @include onLargeMobile {
+  //   display: block;
+  // }
+
+  &-title {
+    color: $color-light-dark;
+    background: $color-accent;
+    border-radius: 8px 8px 0 0;
+    padding: 10px 0;
+    font-weight: 500;
+    text-align: center;
+  }
+
+  &-categories {
+    display: flex;
+    flex-direction: column;
+    margin: 0 15px;
+  }
+
+  &-category {
+    color: $color-light;
+    margin-bottom: 10px;
+    padding: 10px 0;
+    text-transform: uppercase;
+  }
+}
