@@ -1,0 +1,18 @@
+@import "../../utils/styles/mixins.scss";
+@import "../../utils/styles/vars.scss";
+
+.hero {
+  margin-bottom: 30px;
+  padding-top: 30px;
+
+  &-container {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+
+    @include onTablet {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+}

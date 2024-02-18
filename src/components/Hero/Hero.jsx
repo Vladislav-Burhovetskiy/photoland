@@ -1,17 +1,20 @@
 import CategoryNav from "../CategoryNav/CategoryNav";
 import MainSlider from "../MainSlider/MainSlider";
-import PromoImg1 from "../../images/promo_img1.png"
-import PromoImg2 from "../../images/promo_img2.png"
+import SalePromo from "../SalePromo/SalePromo";
 import "./Hero.scss";
 
 export default function Hero() {
   return (
-    <section>
-      <div className="container">
-        
+    <section className="hero">
+      <div className="hero-container">
+        <div>
+          <CategoryNav />
+        </div>
+        <div>
+          <MainSlider />
+        </div>
+        <SalePromo />
       </div>
-      <CategoryNav />
-      <MainSlider />
     </section>
   );
 }

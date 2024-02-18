@@ -1,0 +1,51 @@
+@import "../../utils/styles/mixins.scss";
+@import "../../utils/styles/vars.scss";
+
+.sale-promo {
+  height: 500px;
+  width: 100%;
+
+  &__text {
+    max-width: 145px;
+    margin-bottom: 10px;
+  }
+
+  &__link {
+    color: $color-accent;
+    max-width: 145px;
+  }
+
+  &__info {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 215px;
+    background: $background-image;
+    border-radius: 8px;
+    overflow: hidden;
+    padding: 20px;
+
+    &-1 {
+      margin-bottom: 28px;
+    }
+  }
+
+  &__photo-1,
+  &__photo-2 {
+    position: absolute;
+    width: 160px;
+    height: 160px;
+  }
+
+  &__photo-1 {
+    top: 10px;
+    right: 0px;
+  }
+
+  &__photo-2 {
+    top: 30px;
+    right: -20px;
+    width: 150px;
+  }
+}

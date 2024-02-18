@@ -3,7 +3,7 @@
 .product {
   position: relative;
   height: 355px;
-  background-image: linear-gradient(to top, #1f2126, #33363d);
+  background: $background-image;
   box-shadow: 0 0 2rem rgba(0, 0, 0, 0.15);
   border-radius: 8px;
   overflow: hidden;
