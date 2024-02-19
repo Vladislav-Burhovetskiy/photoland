@@ -6,7 +6,7 @@ export default function Product({ camera }) {
   return (
     <Link to={`products/${camera.id}`}>
       <div className="product">
-        <div className="product-badge">NEW</div>
+        {camera.isNew && <div className="product-badge">NEW</div>}
         <div className="product-image__container">
           <img
             className="product-image"

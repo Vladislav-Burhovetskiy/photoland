@@ -1,0 +1,103 @@
+@import "../../utils/styles/vars.scss";
+@import "../../utils/styles/mixins.scss";
+
+.main-slider {
+  position: relative;
+  max-width: 100%;
+  height: 460px;
+  border-radius: 8px;
+  background: $background-image-right;
+  margin-bottom: 28px;
+
+  @include onTablet {
+    max-width: 456px;
+    margin-right: 28px;
+  }
+
+  @include onDesktop {
+    max-width: 580px;
+    margin-right: 28px;
+  }
+
+  @include onLargeDesktop {
+    max-width: 575px;
+    margin-right: 28px;
+  }
+
+  &__info {
+    font-size: 14px;
+    text-transform: uppercase;
+    padding: 20px;
+    text-align: center;
+
+    @include onLargeMobile {
+      text-align: left;
+      margin-top: 25px;
+      margin-left: 25px;
+    }
+
+    @include onSmallTablet {
+      text-align: left;
+      margin-top: 25px;
+      margin-left: 25px;
+    }
+  }
+
+  &__title {
+    font-size: 14px;
+    font-weight: 400;
+  }
+
+  &__text {
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: -8px;
+  }
+
+  &__btn {
+    position: relative;
+    margin-top: 40px;
+    z-index: 1;
+
+    @include onLargeMobile {
+      margin-top: 50px;
+    }
+
+    @include onDesktop {
+      margin-top: 65px;
+    }
+  }
+
+  &__camera {
+    position: absolute;
+    width: 90%;
+    right: 0px;
+    bottom: 5px;
+    z-index: 0;
+
+    @include onLargeMobile {
+      right: -40px;
+      bottom: -30px;
+    }
+
+    @include onSmallTablet {
+      right: -60px;
+    }
+
+    @include onTablet {
+      right: -50px;
+    }
+
+    @include onDesktop {
+      right: -70px;
+    }
+  }
+
+  .swiper-pagination-bullets {
+    bottom: 1.5rem;
+  }
+
+  .swiper-pagination-bullet {
+    background: $color-accent;
+  }
+}

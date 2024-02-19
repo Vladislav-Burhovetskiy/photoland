@@ -32,7 +32,7 @@ export default function ProductSlider({ data }) {
         },
       }}
       pagination={{ clickable: true }}
-      className="productSlider"
+      className="product-slider"
     >
       {data?.map(
         (camera) =>

@@ -5,7 +5,6 @@ import "./Home.scss"
 
 export default function Home() {
   const { data } = useFetch("./api/cameras.json");
-  console.log(data);
 
   return (
     <section className="home container">

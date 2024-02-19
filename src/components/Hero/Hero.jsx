@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import CategoryNav from "../CategoryNav/CategoryNav";
 import MainSlider from "../MainSlider/MainSlider";
 import SalePromo from "../SalePromo/SalePromo";
@@ -18,3 +19,7 @@ export default function Hero() {
     </section>
   );
 }
+
+Hero.propTypes = {
+  data: PropTypes.array,
+};
