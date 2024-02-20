@@ -1,0 +1,12 @@
+@import "../../utils/styles/vars.scss" ;
+
+.header {
+  &-logo {
+    width: 100px;
+  }
+
+  &-cart {
+    background: $color-dark;
+    max-width: 500px;
+  }
+}

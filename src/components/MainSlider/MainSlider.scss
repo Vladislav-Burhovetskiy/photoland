@@ -70,26 +70,25 @@
 
   &__camera {
     position: absolute;
-    width: 90%;
-    right: 0px;
+    width: 80%;
+    right: 18px;
     bottom: 5px;
     z-index: 0;
 
     @include onLargeMobile {
       right: -40px;
-      bottom: -30px;
     }
 
     @include onSmallTablet {
-      right: -60px;
+      bottom: -10px;
     }
 
     @include onTablet {
-      right: -50px;
+      bottom: 0;
     }
 
     @include onDesktop {
-      right: -70px;
+      bottom: -10px;
     }
   }
 
