@@ -10,7 +10,11 @@ import Logo from "../../images/logo.png";
 import "./Header.scss";
 
 export default function Header() {
-  const {isOpen, setIsOpen} = useCartIsOpen();
+  const { isOpen, setIsOpen } = useCartIsOpen();
+
+  const openCart = () => {
+    setIsOpen(!isOpen);
+  };
 
   return (
     <header className="container">
@@ -24,8 +28,10 @@ export default function Header() {
       <SearchForm />
       <p>sign-in</p>
       <RxAvatar />
-      <SlBag />
-      <div className="header-cart">
+      <div onClick={openCart} className="header-bag">
+        <SlBag />
+      </div>
+      <div className={`header-cart ${isOpen && "show"}`}>
         <Cart />
       </div>
     </header>

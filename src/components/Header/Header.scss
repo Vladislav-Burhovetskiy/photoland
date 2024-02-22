@@ -1,12 +1,30 @@
-@import "../../utils/styles/vars.scss" ;
+@import "../../utils/styles/vars.scss";
 
 .header {
+  position: relative;
+
   &-logo {
     width: 100px;
   }
 
+  &-bag {
+    cursor: pointer;
+  }
+
   &-cart {
+    position: absolute;
+    top: 0;
+    right: 0;
     background: $color-dark;
     max-width: 500px;
+    height: 100vh;
+    width: 0;
+    transition: all 0.7s;
+    z-index: 2;
+    overflow: hidden;
+  }
+
+  &-cart.show {
+    width: 100%;
   }
 }
