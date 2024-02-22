@@ -1,24 +1,76 @@
 @import "../../utils/styles/vars.scss";
+@import "../../utils/styles/mixins.scss";
 
 .header {
-  position: relative;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  background: $color-dark;
+  box-shadow: 0 0 1px $color-accent;
+  z-index: 3;
+
+  &-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+    width: 100%;
+  }
+
+  &-menu__icon {
+    display: block;
+    font-size: 24px;
+
+    @include onTablet {
+      display: none;
+    }
+  }
 
   &-logo {
-    width: 100px;
+    width: 140px;
+    padding-top: 6px;
+  }
+
+  &-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 180px;
+  }
+
+  &-avatar {
+    font-size: 28px;
+    height: 34px;
+    margin: auto 0;
+  }
+
+  &-btn {
+    font-size: 16px;
+    font-weight: normal;
+    color: $color-light;
+    background: transparent;
+    border: 0.1px solid $color-accent;
+    padding: 5px 12px;
   }
 
   &-bag {
     cursor: pointer;
+    font-size: 24px;
+    height: 30px;
+    margin: auto 0;
   }
 
   &-cart {
     position: absolute;
-    top: 0;
+    top: 65px;
     right: 0;
     background: $color-dark;
     max-width: 500px;
     height: 100vh;
     width: 0;
+    box-shadow: 0 0 1px $color-accent;
+    border-radius: 8px;
     transition: all 0.7s;
     z-index: 2;
     overflow: hidden;
