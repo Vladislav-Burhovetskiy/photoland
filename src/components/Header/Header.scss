@@ -7,7 +7,9 @@
   right: 0;
   left: 0;
   background: $color-dark;
-  box-shadow: 0 0 1px $color-accent;
+  // background-image: linear-gradient(to bottom, #1a1a1a 50%, #33363d);
+  // box-shadow: 0px 0px 1px $color-accent;
+  box-shadow: 0px 0.5px 0px $color-accent;
   z-index: 3;
 
   &-container {
@@ -20,16 +22,22 @@
 
   &-menu__icon {
     display: block;
-    font-size: 24px;
+    font-size: 26px;
+    cursor: pointer;
 
     @include onTablet {
-      display: none;
+      // display: none;
     }
   }
 
   &-logo {
     width: 140px;
     padding-top: 6px;
+    display: none;
+
+    @include onTablet {
+      display: block;
+    }
   }
 
   &-actions {
@@ -40,8 +48,8 @@
   }
 
   &-avatar {
-    font-size: 28px;
-    height: 34px;
+    font-size: 32px;
+    height: 38px;
     margin: auto 0;
   }
 
@@ -61,14 +69,14 @@
     margin: auto 0;
   }
 
-  &-cart {
+  &-cart,
+  &-menu__mobile {
     position: absolute;
     top: 65px;
-    right: 0;
-    background: $color-dark;
+    width: 0;
     max-width: 500px;
     height: 100vh;
-    width: 0;
+    background: $color-dark;
     box-shadow: 0 0 1px $color-accent;
     border-radius: 8px;
     transition: all 0.7s;
@@ -76,6 +84,15 @@
     overflow: hidden;
   }
 
+  &-cart {
+    right: 0;
+  }
+
+  &-menu__mobile {
+    left: 0;
+  }
+
+  &-menu__mobile.show,
   &-cart.show {
     width: 100%;
   }
