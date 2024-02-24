@@ -9,4 +9,15 @@
   // @include onLargeDesktop {
   //   display: none;
   // }
+
+  &__fix {
+    font-size: 28px;
+    stroke-width: 1.3px;
+
+    &-container {
+      display: flex;
+      justify-content: flex-end;
+      margin-bottom: 10px;
+    }
+  }
 }

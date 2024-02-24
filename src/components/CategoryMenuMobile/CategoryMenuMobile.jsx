@@ -7,7 +7,9 @@ import "./CategoryMenuMobile.scss";
 export default function CategoryMenuMobile({ openMenu }) {
   return (
     <div className="mobile-menu">
-      <FiX onClick={openMenu} />
+      <div className="mobile-menu__fix-container">
+        <FiX onClick={openMenu} className="mobile-menu__fix"/>
+      </div>
       <CategoryNav />
     </div>
   );
