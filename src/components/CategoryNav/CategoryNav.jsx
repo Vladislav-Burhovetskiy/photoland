@@ -1,4 +1,3 @@
-// import { Link } from "react-router-dom";
 import { Link } from "react-router-dom";
 import useFetch from "../../hooks/useFetch";
 import "./CategoryNav.scss";
@@ -8,7 +7,6 @@ export default function CategoryNav() {
   const allCategories = data?.map((item) => item.categories);
   const uniqueCategories = [...new Set(allCategories)];
 
-  console.log(uniqueCategories);
   return (
     <aside className="nav">
       <div className="nav-title">BROWSE CATEGORIES</div>

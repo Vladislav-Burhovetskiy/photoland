@@ -14,4 +14,13 @@
       justify-content: space-between;
     }
   }
+
+  &-nav {
+    display: none;
+
+    @include onLargeDesktop {
+      display: block;
+      margin-right: 28px;
+    }
+  }
 }

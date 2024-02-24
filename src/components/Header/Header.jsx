@@ -6,7 +6,7 @@ import { HiOutlineUserCircle } from "react-icons/hi2";
 import { useCartIsOpen } from "../../hooks/useCartIsOpen";
 import SearchForm from "../SearchForm/SearchForm";
 import Cart from "../Cart/Cart";
-import CategoryNavMobile from "../CategoryNavMobile/CategoryNavMobile";
+import CategoryMenuMobile from "../CategoryMenuMobile/CategoryMenuMobile";
 import Logo from "../../images/logo.png";
 import "./Header.scss";
 
@@ -25,18 +25,22 @@ export default function Header() {
   return (
     <header className="header">
       <div className="header-container container">
-        <div className="header-menu__icon" onClick={openMenu}>
-          <FiMenu strokeWidth={1.3} />
+        <div className="header-container__icon-logo">
+          <div className="header-menu__icon" onClick={openMenu}>
+            <FiMenu strokeWidth={1.3} />
+          </div>
+          <Link to={"/"}>
+            <div className="header-logo">
+              <img src={Logo} alt="Logo Photoland" />
+            </div>
+          </Link>
         </div>
         <div className={`header-menu__mobile ${menuIsOpen && "show"}`}>
-          <CategoryNavMobile openMenu={openMenu} />
+          <CategoryMenuMobile openMenu={openMenu} />
         </div>
-        <Link to={"/"}>
-          <div className="header-logo">
-            <img src={Logo} alt="Logo Photoland" />
-          </div>
-        </Link>
-        <SearchForm />
+        <div className="header-search">
+          <SearchForm />
+        </div>
         <div className="header-actions">
           <button className="header-btn">login-in</button>
           <div className="header-avatar">

@@ -4,16 +4,9 @@
 .nav {
   height: 460px;
   min-width: 280px;
-  // width: 100%;
   background: $color-dark;
   border-radius: 8px;
   font-size: 14px;
-  display: none;
-
-  @include onLargeDesktop {
-    display: block;
-    margin-right: 28px;
-  }
 
   &-title {
     color: $color-light-dark;
