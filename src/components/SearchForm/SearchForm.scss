@@ -1,0 +1,37 @@
+@import "../../utils/styles/vars.scss";
+@import "../../utils/styles/mixins.scss";
+
+.search {
+  &-form {
+    position: relative;
+  }
+
+  &-input {
+    font-size: 14px;
+    width: 100%;
+    padding: 10px 15px;
+    background: $color-light;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+
+    @include onTablet {
+      width: 300px;
+    }
+
+    @include onDesktop {
+      width: 450px;
+    }
+
+    @include onLargeDesktop {
+      width: 500px;
+    }
+  }
+
+  &-btn {
+    position: absolute;
+    right: 0;
+    padding: 8px 25px;
+    border-radius: 0 8px 8px 0;
+  }
+}

@@ -48,7 +48,7 @@ export default function Header() {
           </div>
           <div onClick={openCart} className="header-bag">
             <SlBag />
-            <p className="header-bag__count">5</p>
+            <p className="header-bag__count">50</p>
           </div>
           <div className={`header-cart ${cartIsOpen && "show"}`}>
             <Cart />

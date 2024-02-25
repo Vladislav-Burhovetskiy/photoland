@@ -7,9 +7,8 @@
   right: 0;
   left: 0;
   background: $color-dark;
-  // background-image: linear-gradient(to bottom, #1a1a1a 50%, #33363d);
-  // box-shadow: 0px 0px 1px $color-accent;
-  box-shadow: 0px 0.5px 0px $color-accent;
+  // box-shadow: 0px 0.5px 0px $color-accent;
+  box-shadow: 0px 0px 1px $color-accent;
   z-index: 3;
 
   &-container {
@@ -31,7 +30,6 @@
     @include onTablet {
       display: block;
     }
-
   }
 
   &-menu__icon {
@@ -76,6 +74,10 @@
     background: transparent;
     border: 0.1px solid $color-accent;
     padding: 5px 12px;
+
+    &:hover {
+      color: $color-accent;
+    }
   }
 
   &-bag {
@@ -89,11 +91,11 @@
       position: absolute;
       bottom: -5px;
       right: -5px;
-      font-size: 12px;
+      font-size: 11px;
       font-weight: 700;
       color: $color-dark;
       background: $color-accent;
-      padding: 1px 0;
+      padding: 2px 0;
       width: 90%;
       border-radius: 50%;
       text-align: center;
@@ -105,7 +107,6 @@
     position: absolute;
     top: 65px;
     width: 0;
-    max-width: 500px;
     height: 100vh;
     background: $color-dark;
     box-shadow: 0 0 1px $color-accent;
@@ -117,11 +118,17 @@
 
   &-cart {
     right: 0;
+    max-width: 500px;
   }
 
   &-menu__mobile {
-    // top: 0;
+    top: 0;
     left: 0;
+    max-width: 100%;
+
+    @include onLargeMobile {
+      max-width: 350px;
+    }
   }
 
   &-menu__mobile.show,

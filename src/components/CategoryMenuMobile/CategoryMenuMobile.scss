@@ -4,11 +4,8 @@
 .mobile-menu {
   display: block;
   padding: 20px;
-
-  // i can hide just the menu icon btn
-  // @include onLargeDesktop {
-  //   display: none;
-  // }
+  max-width: 350px;
+  margin: 0 auto;
 
   &__fix {
     font-size: 28px;
@@ -18,6 +15,15 @@
       display: flex;
       justify-content: flex-end;
       margin-bottom: 10px;
+    }
+  }
+
+  &__search {
+    display: block;
+    margin-bottom: 20px;
+
+    @include onTablet {
+      display: none;
     }
   }
 }
