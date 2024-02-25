@@ -1,11 +1,19 @@
 import { FiSearch } from "react-icons/fi";
 import { useNavigate } from "react-router-dom";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "./SearchForm.scss";
 
 export default function SearchForm() {
   const navigate = useNavigate("");
   const [searchTerm, setSearchTerm] = useState("");
+  const [isAnimating, setIsAnimating] = useState("");
+  const searchInput = document.querySelectorAll("input");
+
+  useEffect(() => {
+    const timeout = setTimeout(() => setIsAnimating(false), 1000);
+
+    return () => clearTimeout(timeout);
+  });
 
   const handleSearchInput = (e) => {
     setSearchTerm(e.target.value);
@@ -16,15 +24,22 @@ export default function SearchForm() {
 
     if (searchTerm.length > 0) {
       navigate(`/search?query=${searchTerm}`);
+      console.log(searchInput)
+      searchInput[0].value = "";
+      searchInput[1].value = "";
       setSearchTerm("");
     } else {
-      alert("Please search for something...");
+      setIsAnimating(true);
     }
   };
 
   return (
-    <form onSubmit={handleSubmit} className="search-form">
+    <form
+      onSubmit={handleSubmit}
+      className={`search-form ${isAnimating && "shake"}`}
+    >
       <input
+        id="search-input"
         onChange={handleSearchInput}
         type="text"
         placeholder="Search for the product..."
