@@ -1,16 +1,9 @@
-import { useState } from "react";
+import useFetch from "../../hooks/useFetch";
 
 export default function Products() {
-  const [arr, setArr] = useState([]);
+  const { data } = useFetch("./api/cameras.json");
 
-  fetch("./api/cameras.json")
-    .then((res) => res.json())
-    .then((data) => setArr(data.cameras))
-    .catch((err) => console.error(err));
-
-  // console.log(arr);
-
-  const photoEl = arr.map(item => {
+  const photoEl = data.map((item) => {
     return <img key={item.id} src={item.image} alt={item.title} />;
   });
 

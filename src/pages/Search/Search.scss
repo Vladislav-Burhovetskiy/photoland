@@ -1,0 +1,29 @@
+@import "../../utils/styles/mixins.scss";
+
+.search {
+  @include onLargeDesktop {
+    display: flex;
+  }
+
+  &-category {
+    display: none;
+    margin-right: 28px;
+    margin-top: 34px;
+
+    @include onLargeDesktop {
+      display: block;
+    }
+  }
+
+  &-cameras {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 28px;
+    margin-top: 96px;
+    width: 100%;
+
+    @include onLargeDesktop {
+      margin-top: 34px;
+    }
+  }
+}

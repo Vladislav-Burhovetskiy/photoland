@@ -24,7 +24,8 @@ export default function SearchForm() {
 
     if (searchTerm.length > 0) {
       navigate(`/search?query=${searchTerm}`);
-      console.log(searchInput)
+
+      // i use 2 search-input
       searchInput[0].value = "";
       searchInput[1].value = "";
       setSearchTerm("");
@@ -42,7 +43,7 @@ export default function SearchForm() {
         id="search-input"
         onChange={handleSearchInput}
         type="text"
-        placeholder="Search for the product..."
+        placeholder="Search by camera brand (Canon, Nikon, Sony...)"
         className="search-input"
       />
       <button className="search-btn">
