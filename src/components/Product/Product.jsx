@@ -4,7 +4,7 @@ import "./Product.scss";
 
 export default function Product({ camera }) {
   return (
-    <Link to={`products/${camera.id}`}>
+    <Link to={`/products/${camera.id}`}>
       <div className="product">
         {camera.isNew && <div className="product-badge">NEW</div>}
         <div className="product-image__container">

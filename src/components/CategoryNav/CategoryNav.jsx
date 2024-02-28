@@ -12,7 +12,7 @@ export default function CategoryNav() {
       <div className="nav-title">BROWSE CATEGORIES</div>
       <div className="nav-categories">
         {uniqueCategories.map((category) => (
-          <Link to={`products/${category}`} className="nav-category" key={category}>
+          <Link to={`/products/${category}`} className="nav-category" key={category}>
             {category}
           </Link>
         ))}
