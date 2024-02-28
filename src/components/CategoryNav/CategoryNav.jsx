@@ -4,6 +4,7 @@ import "./CategoryNav.scss";
 
 export default function CategoryNav() {
   const { data } = useFetch("./api/cameras.json");
+  console.log(data)
   const allCategories = data?.map((item) => item.categories);
   const uniqueCategories = [...new Set(allCategories)];
 
@@ -12,7 +13,7 @@ export default function CategoryNav() {
       <div className="nav-title">BROWSE CATEGORIES</div>
       <div className="nav-categories">
         {uniqueCategories.map((category) => (
-          <Link to={`/products/${category}`} className="nav-category" key={category}>
+          <Link to={`/${category}`} className="nav-category" key={category}>
             {category}
           </Link>
         ))}
