@@ -1,8 +1,6 @@
 import { useLocation } from "react-router-dom";
-import CategoryNav from "../../components/CategoryNav/CategoryNav";
-import Product from "../../components/Product/Product";
+import ProductList from "../../components/ProductList/ProductList";
 import useFetch from "../../hooks/useFetch";
-import "./Search.scss";
 
 export default function Search() {
   const location = useLocation();
@@ -17,22 +15,8 @@ export default function Search() {
 
   const resultTitle =
     searchCameras?.length > 0
-      ? `${searchCameras.length} results for ${searchTerm}`
-      : `No results found for ${searchTerm}`;
+      ? `${searchCameras.length} results for "${searchTerm}"`
+      : `No results found for "${searchTerm}"`;
 
-  return (
-    <div className="search container">
-      <div className="search-category">
-        <CategoryNav />
-      </div>
-      <div className="search-result">
-        <h2 className="search-result__title">{resultTitle}</h2>
-        <div className="search-result__cameras">
-          {searchCameras?.map((product) => (
-            <Product key={product.id} camera={product} />
-          ))}
-        </div>
-      </div>
-    </div>
-  );
+  return <ProductList title={resultTitle} products={searchCameras} />;
 }
