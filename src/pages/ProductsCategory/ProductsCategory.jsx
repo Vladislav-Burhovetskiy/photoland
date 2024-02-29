@@ -1,22 +1,23 @@
 import { useParams } from "react-router-dom";
 import Product from "../../components/Product/Product";
 import CategoryNav from "../../components/CategoryNav/CategoryNav";
+import SpinnerLoading from "../../components/Spinner/SpinnerLoading";
 import useFetch from "../../hooks/useFetch";
 import "./ProductsCategory.scss";
 
 export default function ProductsCategory() {
   const { category } = useParams();
-  const { data } = useFetch("./api/cameras.json");
+  const { data, isLoading } = useFetch("./api/cameras.json");
 
-  console.log(data);
+  if (isLoading) {
+    return <SpinnerLoading />;
+  }
+
   const categoryCameras = data?.filter(
     (product) => product.categories === category
   );
 
-  const resultTitle =
-    categoryCameras?.length > 0
-      ? `${categoryCameras.length} results for ${category}`
-      : `No results found for ${category}`;
+  const resultTitle = `${category} cameras`;
 
   return (
     <div className="products container">

@@ -4,7 +4,6 @@ import "./CategoryNav.scss";
 
 export default function CategoryNav() {
   const { data } = useFetch("./api/cameras.json");
-  console.log(data)
   const allCategories = data?.map((item) => item.categories);
   const uniqueCategories = [...new Set(allCategories)];
 
