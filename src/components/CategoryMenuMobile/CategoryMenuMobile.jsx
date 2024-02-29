@@ -13,7 +13,7 @@ export default function CategoryMenuMobile({ openMenu }) {
       <div className="mobile-menu__search">
         <SearchForm />
       </div>
-      <CategoryNav />
+      <CategoryNav openMenu={openMenu} />
     </div>
   );
 }

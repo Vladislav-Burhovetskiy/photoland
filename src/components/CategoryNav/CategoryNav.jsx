@@ -1,8 +1,9 @@
+import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 import useFetch from "../../hooks/useFetch";
 import "./CategoryNav.scss";
 
-export default function CategoryNav() {
+export default function CategoryNav({ openMenu }) {
   const { data } = useFetch("./api/cameras.json");
   const allCategories = data?.map((item) => item.categories);
   const uniqueCategories = [...new Set(allCategories)];
@@ -12,7 +13,7 @@ export default function CategoryNav() {
       <div className="nav-title">BROWSE CATEGORIES</div>
       <div className="nav-categories">
         {uniqueCategories.map((category) => (
-          <Link to={`/${category}`} className="nav-category" key={category}>
+          <Link to={`/${category}`} className="nav-category" key={category} onClick={openMenu}>
             {category}
           </Link>
         ))}
@@ -20,3 +21,7 @@ export default function CategoryNav() {
     </aside>
   );
 }
+
+CategoryNav.propTypes = {
+  openMenu: PropTypes.func,
+};
