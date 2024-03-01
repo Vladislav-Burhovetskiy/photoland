@@ -1,10 +1,10 @@
 import { useParams } from "react-router-dom";
-import ProductList from "../../components/ProductList/ProductList";
-import useFetch from "../../hooks/useFetch";
+import ProductList from "../components/ProductList/ProductList";
+import { useDataContext } from "../hooks/useDataContext";
 
 export default function ProductsCategory() {
   const { category } = useParams();
-  const { data } = useFetch("./api/cameras.json");
+  const { data } = useDataContext();
 
   const categoryCameras = data?.filter(
     (product) => product.categories === category

@@ -1,6 +1,9 @@
-import { useState, useEffect } from "react";
+import PropTypes from "prop-types";
+import { createContext, useState, useEffect } from "react";
 
-const useFetch = (url) => {
+export const DataContext = createContext();
+
+export function DataProvider({ children }) {
   const [data, setData] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(null);
@@ -8,7 +11,7 @@ const useFetch = (url) => {
   useEffect(() => {
     const fetchData = () => {
       setIsLoading(true);
-      fetch(url)
+      fetch("./api/cameras.json")
         .then((response) => {
           if (!response.ok) {
             throw new Error("Failed to fetch data");
@@ -25,9 +28,15 @@ const useFetch = (url) => {
     };
 
     fetchData();
-  }, [url]);
+  }, []);
 
-  return { data, isLoading, error };
+  return (
+    <DataContext.Provider value={{ data, isLoading, error }}>
+      {children}
+    </DataContext.Provider>
+  );
+}
+
+DataProvider.propTypes = {
+  children: PropTypes.element,
 };
-
-export default useFetch;

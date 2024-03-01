@@ -16,9 +16,9 @@ export default function Product({ camera }) {
       <div className="product">
         {camera.isNew && <div className="product-badge">NEW</div>}
         <div className="product-image__container">
-          {isLoading && <SpinnerLoading /> }
+          {isLoading && <SpinnerLoading />}
           <img
-            className={`product-image ${isLoading && 'hidden'}`}
+            className={`product-image ${isLoading && "hidden"}`}
             src={camera.image}
             alt={camera.title}
             onLoad={handleImageLoad}

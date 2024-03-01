@@ -1,5 +1,6 @@
 import PropTypes from "prop-types";
 import Product from "../Product/Product";
+import { useDataContext } from "../../hooks/useDataContext";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination } from "swiper/modules";
 import "swiper/scss";
@@ -7,7 +8,9 @@ import "swiper/scss/navigation";
 import "swiper/scss/pagination";
 import "./ProductSlider.scss";
 
-export default function ProductSlider({ data }) {
+export default function ProductSlider() {
+  const { data } = useDataContext();
+
   return (
     <Swiper
       modules={[Navigation, Pagination]}

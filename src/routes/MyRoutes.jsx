@@ -1,16 +1,16 @@
 import { Route, Routes } from "react-router-dom";
 import Layout from "../components/Layout/Layout";
-import Home from "../pages/Home/Home";
-import ProductsCategory from "../pages/ProductsCategory/ProductsCategory.jsx";
-import ProductDetails from "../pages/ProductDetails/ProductDetails";
-import Search from "../pages/Search/Search";
+import Home from "../pages/Home.jsx";
+import ProductsCategory from "../pages/ProductsCategory.jsx";
+import ProductDetails from "../pages/ProductDetails.jsx";
+import Search from "../pages/Search.jsx";
 
 export default function MyRoutes() {
   return (
     <Routes>
-      <Route path="/" element={<Layout />}>
+      <Route exact path="/" element={<Layout />}>
         <Route index element={<Home />} />
-        <Route path="/:category" element={<ProductsCategory />} />
+        <Route path="products/:category" element={<ProductsCategory />} />
         <Route path="product/:id" element={<ProductDetails />} />
         <Route path="search" element={<Search />} />
       </Route>
