@@ -13,7 +13,7 @@ export function DataProvider({ children }) {
       setIsLoading(true);
 
       // setTimeout(() => {
-        fetch("./src/api/cameras.json")
+        fetch("./api/cameras.json")
           .then((response) => {
             if (!response.ok) {
               throw new Error("Failed to fetch data");
