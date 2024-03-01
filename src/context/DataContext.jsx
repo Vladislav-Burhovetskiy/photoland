@@ -11,20 +11,23 @@ export function DataProvider({ children }) {
   useEffect(() => {
     const fetchData = () => {
       setIsLoading(true);
-      fetch("./api/cameras.json")
-        .then((response) => {
-          if (!response.ok) {
-            throw new Error("Failed to fetch data");
-          }
-          return response.json();
-        })
-        .then((data) => setData(data.cameras))
-        .catch((error) => {
-          setError(error);
-        })
-        .finally(() => {
-          setIsLoading(false);
-        });
+
+      // setTimeout(() => {
+        fetch("./api/cameras.json")
+          .then((response) => {
+            if (!response.ok) {
+              throw new Error("Failed to fetch data");
+            }
+            return response.json();
+          })
+          .then((data) => setData(data.cameras))
+          .catch((error) => {
+            setError(error);
+          })
+          .finally(() => {
+            setIsLoading(false);
+          });
+      // }, 1000);
     };
 
     fetchData();

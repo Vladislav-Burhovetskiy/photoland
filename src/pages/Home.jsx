@@ -3,7 +3,7 @@ import Hero from "../components/Hero/Hero";
 
 export default function Home() {
   return (
-    <section className="home container">
+    <section className="container">
       <Hero />
       <LatestProducts />
     </section>
