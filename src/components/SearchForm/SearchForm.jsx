@@ -23,7 +23,7 @@ export default function SearchForm() {
     e.preventDefault();
 
     if (searchTerm.length > 0) {
-      navigate(`/search?query=${searchTerm}`);
+      navigate(`/photoland/search?query=${searchTerm}`);
 
       // i use 2 search-input
       searchInput[0].value = "";

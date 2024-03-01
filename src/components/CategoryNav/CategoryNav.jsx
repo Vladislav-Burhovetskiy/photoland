@@ -13,7 +13,7 @@ export default function CategoryNav({ openMenu }) {
       <div className="nav-title">BROWSE CATEGORIES</div>
       <div className="nav-categories">
         {uniqueCategories.map((category) => (
-          <Link to={`/products/${category}`} className="nav-category" key={category} onClick={openMenu}>
+          <Link to={`/photoland/products/${category}`} className="nav-category" key={category} onClick={openMenu}>
             {category}
           </Link>
         ))}

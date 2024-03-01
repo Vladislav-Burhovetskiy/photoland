@@ -8,7 +8,7 @@ import Search from "../pages/Search.jsx";
 export default function MyRoutes() {
   return (
     <Routes>
-      <Route exact path="/" element={<Layout />}>
+      <Route path="/photoland" element={<Layout />}>
         <Route index element={<Home />} />
         <Route path="products/:category" element={<ProductsCategory />} />
         <Route path="product/:id" element={<ProductDetails />} />
