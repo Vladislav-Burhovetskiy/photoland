@@ -29,7 +29,7 @@ export default function Header() {
           <div className="header-menu__icon" onClick={openMenu}>
             <FiMenu strokeWidth={1.3} />
           </div>
-          <Link to={"/photoland"}>
+          <Link to={"/photoland/"}>
             <div className="header-logo">
               <img src={Logo} alt="Logo Photoland" />
             </div>

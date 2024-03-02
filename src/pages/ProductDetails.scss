@@ -1,0 +1,53 @@
+@import "../utils/styles/mixins.scss";
+@import "../utils/styles/vars.scss";
+
+.product-details {
+  margin-bottom: 28px;
+  margin-top: 100px;
+  
+  @include onDesktop {
+    display: flex;
+    height: 400px;
+  }
+  
+  @include onLargeDesktop {
+    height: 540px;
+  }
+  
+  &__photo-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: $background-image;
+    border-radius: 8px;
+    margin-bottom: 28px;
+
+    @include onDesktop {
+      max-width: 40%;
+      margin-bottom: 0;
+    }
+
+  }
+
+  &__photo-image {
+    max-width: 65%;
+    height: 65%;
+  }
+
+  &__info {
+    flex: 1;
+    background: $color-dark;
+    padding: 20px;
+    border-radius: 8px;
+
+    @include onDesktop {
+      margin-left: 28px;
+    }
+  }
+
+  &__category {
+    color: $color-accent;
+    text-transform: uppercase;
+  }
+}
