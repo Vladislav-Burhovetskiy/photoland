@@ -11,7 +11,7 @@ export default function CategoryMenuMobile({ openMenu }) {
         <FiX onClick={openMenu} className="mobile-menu__fix" />
       </div>
       <div className="mobile-menu__search">
-        <SearchForm />
+        <SearchForm openMenu={openMenu} />
       </div>
       <CategoryNav openMenu={openMenu} />
     </div>

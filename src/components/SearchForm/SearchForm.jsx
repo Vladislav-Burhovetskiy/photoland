@@ -1,9 +1,10 @@
+import PropTypes from "prop-types";
 import { FiSearch } from "react-icons/fi";
 import { useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 import "./SearchForm.scss";
 
-export default function SearchForm() {
+export default function SearchForm({ openMenu }) {
   const navigate = useNavigate("");
   const [searchTerm, setSearchTerm] = useState("");
   const [isAnimating, setIsAnimating] = useState("");
@@ -46,9 +47,13 @@ export default function SearchForm() {
         placeholder="Search by camera brand (Canon, Nikon, Sony...)"
         className="search-input"
       />
-      <button className="search-btn">
+      <button className="search-btn" onClick={openMenu}>
         <FiSearch />
       </button>
     </form>
   );
 }
+
+SearchForm.propTypes = {
+  openMenu: PropTypes.func,
+};
