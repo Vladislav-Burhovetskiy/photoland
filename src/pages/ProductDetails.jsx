@@ -20,7 +20,7 @@ export default function ProductDetails() {
   return (
     <section className="container">
       <ProductInfo camera={camera} />
-      <RelatedProduct />
+      <RelatedProduct category={camera.categories}/>
     </section>
   );
 }

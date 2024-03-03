@@ -1,14 +1,13 @@
+import PropTypes from "prop-types";
 import ProductSlider from "../ProductSlider/ProductSlider";
 import { useDataContext } from "../../hooks/useDataContext";
-import { useParams } from "react-router-dom";
 import "./RelatedProduct.scss";
 
-export default function RelatedProduct() {
-  const { id } = useParams();
+export default function RelatedProduct({ category }) {
   const { data } = useDataContext();
 
   const productsCategory = data?.filter(
-    (camera) => camera.categories === data[id - 1].categories
+    (camera) => camera.categories === category
   );
   return (
     <div>
@@ -17,3 +16,7 @@ export default function RelatedProduct() {
     </div>
   );
 }
+
+RelatedProduct.propTypes = {
+  category: PropTypes.string,
+};
