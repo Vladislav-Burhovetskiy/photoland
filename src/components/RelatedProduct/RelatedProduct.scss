@@ -1,0 +1,10 @@
+@import "../../utils/styles/mixins.scss";
+
+.related-title {
+  margin-bottom: 20px;
+  text-align: center;
+
+  @include onTablet {
+    text-align: left;
+  }
+}

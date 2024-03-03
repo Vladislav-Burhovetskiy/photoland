@@ -1,6 +1,5 @@
 import PropTypes from "prop-types";
 import Product from "../Product/Product";
-import { useDataContext } from "../../hooks/useDataContext";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination } from "swiper/modules";
 import "swiper/scss";
@@ -8,9 +7,7 @@ import "swiper/scss/navigation";
 import "swiper/scss/pagination";
 import "./ProductSlider.scss";
 
-export default function ProductSlider() {
-  const { data } = useDataContext();
-
+export default function ProductSlider({ data }) {
   return (
     <Swiper
       modules={[Navigation, Pagination]}
@@ -37,14 +34,11 @@ export default function ProductSlider() {
       pagination={{ clickable: true }}
       className="product-slider"
     >
-      {data?.map(
-        (camera) =>
-          camera.isNew && (
-            <SwiperSlide key={camera.id}>
-              <Product camera={camera} />
-            </SwiperSlide>
-          )
-      )}
+      {data?.map((camera) => (
+        <SwiperSlide key={camera.id}>
+          <Product camera={camera} />
+        </SwiperSlide>
+      ))}
     </Swiper>
   );
 }

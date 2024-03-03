@@ -3,11 +3,17 @@
 
 .product-details {
   position: relative;
-  margin-bottom: 28px;
+  margin-bottom: 50px;
   margin-top: 100px;
+
 
   @include onDesktop {
     display: flex;
+    height: 475px;
+  }
+
+  @include onLargeDesktop {
+    height: 450px;
   }
 
   &__back-nav {
@@ -69,6 +75,9 @@
   }
 
   &__info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     flex: 1;
     background: $color-dark;
     padding: 25px;
