@@ -1,5 +1,5 @@
 import { useParams, useNavigate } from "react-router-dom";
-import RelatedProduct from "../components/RelatedProduct/RelatedProduct";
+// import RelatedProduct from "../components/RelatedProduct/RelatedProduct";
 // import { useCartIsOpen } from "../../hooks/useCartIsOpen";
 import { useDataContext } from "../hooks/useDataContext";
 import SpinnerLoading from "../components/Spinner/SpinnerLoading";
@@ -45,7 +45,7 @@ export default function ProductDetails() {
           </div>
         </div>
       </div>
-      <RelatedProduct />
+      {/* <RelatedProduct /> */}
     </section>
   );
 }
