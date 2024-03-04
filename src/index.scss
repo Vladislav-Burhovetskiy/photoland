@@ -1,9 +1,8 @@
-@import "./utils/styles/normalize.scss";
-@import "./utils/styles/vars.scss";
-@import "./utils/styles/mixins.scss";
-@import "./utils/styles/container.scss";
-@import "./utils/styles/link.scss";
-@import "./utils/styles/button.scss";
+@import "./styles/normalize.scss";
+@import "./styles/utils.scss";
+@import "./styles/container.scss";
+@import "./styles/link.scss";
+@import "./styles/button.scss";
 
 :root {
   font-family: $font-text;

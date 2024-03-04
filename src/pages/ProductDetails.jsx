@@ -1,7 +1,6 @@
 import { useParams } from "react-router-dom";
 import ProductInfo from "../components/ProductInfo/ProductInfo";
 import RelatedProduct from "../components/RelatedProduct/RelatedProduct";
-// import { useCartIsOpen } from "../../hooks/useCartIsOpen";
 import { useDataContext } from "../hooks/useDataContext";
 import SpinnerLoading from "../components/Spinner/SpinnerLoading";
 
