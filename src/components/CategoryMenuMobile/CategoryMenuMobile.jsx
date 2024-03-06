@@ -4,20 +4,20 @@ import CategoryNav from "../CategoryNav/CategoryNav";
 import { FiX } from "react-icons/fi";
 import "./CategoryMenuMobile.scss";
 
-export default function CategoryMenuMobile({ openMenu }) {
+export default function CategoryMenuMobile({ closeMenu }) {
   return (
     <div className="mobile-menu">
       <div className="mobile-menu__fix-container">
-        <FiX onClick={openMenu} className="mobile-menu__fix" />
+        <FiX onClick={closeMenu} className="mobile-menu__fix" />
       </div>
       <div className="mobile-menu__search">
-        <SearchForm openMenu={openMenu} />
+        <SearchForm openMenu={closeMenu} />
       </div>
-      <CategoryNav openMenu={openMenu} />
+      <CategoryNav openMenu={closeMenu} />
     </div>
   );
 }
 
 CategoryMenuMobile.propTypes = {
-  openMenu: PropTypes.func,
+  closeMenu: PropTypes.func,
 };

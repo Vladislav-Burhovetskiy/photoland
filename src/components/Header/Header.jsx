@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { SlBag } from "react-icons/sl";
 import { FiMenu } from "react-icons/fi";
 import { HiOutlineUserCircle } from "react-icons/hi2";
-import { useCartIsOpen } from "../../hooks/useCartIsOpen";
+import { useCartContext } from "../../hooks/useCartContext";
 import SearchForm from "../SearchForm/SearchForm";
 import Cart from "../Cart/Cart";
 import CategoryMenuMobile from "../CategoryMenuMobile/CategoryMenuMobile";
@@ -11,7 +11,7 @@ import Logo from "../../images/logo.png";
 import "./Header.scss";
 
 export default function Header() {
-  const { cartIsOpen, setCartIsOpen } = useCartIsOpen();
+  const { cartIsOpen, setCartIsOpen } = useCartContext();
   const [menuIsOpen, setMenuIsOpen] = useState(false);
 
   const openMenu = () => {
@@ -36,7 +36,7 @@ export default function Header() {
           </Link>
         </div>
         <div className={`header-menu__mobile ${menuIsOpen && "show"}`}>
-          <CategoryMenuMobile openMenu={openMenu} />
+          <CategoryMenuMobile closeMenu={openMenu} />
         </div>
         <div className="header-search">
           <SearchForm />

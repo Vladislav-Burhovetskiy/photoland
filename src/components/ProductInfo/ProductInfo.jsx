@@ -1,9 +1,11 @@
 import PropTypes from "prop-types";
 import { useNavigate } from "react-router-dom";
+import { useCartContext } from "../../hooks/useCartContext";
 import "./ProductInfo.scss";
 
 export default function ProductInfo({ camera }) {
   const navigate = useNavigate();
+  const { addToCart } = useCartContext();
 
   return (
     <div className="product-details">
@@ -32,7 +34,7 @@ export default function ProductInfo({ camera }) {
         </ul>
         <div className="product-details__order">
           <p className="product-details__order-price">${camera?.price}</p>
-          <button>Add to cart</button>
+          <button onClick={() => addToCart(camera)}>Add to cart</button>
         </div>
       </div>
     </div>
