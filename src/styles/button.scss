@@ -15,6 +15,11 @@ button:hover {
   box-shadow: inset 1px 1px 4px $color-light-dark;
 }
 
-button:active{
+button:active {
   scale: 0.97;
+}
+
+.btn-disabled {
+  opacity: 0.8;
+  cursor: not-allowed;
 }

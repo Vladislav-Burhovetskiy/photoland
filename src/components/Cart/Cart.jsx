@@ -1,17 +1,19 @@
 import PropTypes from "prop-types";
 // import { useState } from "react";
+import CartItem from "../CartItem/CartItem";
 import { useCartContext } from "../../hooks/useCartContext";
 import { FiX } from "react-icons/fi";
-
 import "./Cart.scss";
 
 export default function Cart() {
-  const { setCartIsOpen } = useCartContext();
+  const { setCartIsOpen, cart } = useCartContext();
 
   return (
     <div className="cart">
-      <FiX className="cart-fix" onClick={() => setCartIsOpen()} />
-      Cart
+      <div className="cart-close" onClick={() => setCartIsOpen(false)}>
+        <FiX />
+      </div>
+      {cart.map(item => <CartItem key={item.id} item={item} />)}
     </div>
   );
 }

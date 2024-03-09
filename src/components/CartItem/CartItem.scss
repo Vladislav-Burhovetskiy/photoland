@@ -1,0 +1,56 @@
+@import "../../styles/utils.scss";
+
+.cart-item {
+  display: flex;
+  margin-bottom: 25px;
+  font-size: 12px;
+  font-weight: 500;
+
+  &__image {
+    width: 70px;
+    height: 70px;
+    margin-right: 8px;
+  }
+
+  &__title {
+    font-weight: 500;
+    color: $color-light;
+    margin-right: 8px;
+  }
+
+  &__remove {
+    font-size: 18px;
+    stroke-width: 1px;
+    cursor: pointer;
+    transition: all 0.3s;
+
+    &:hover {
+      color: $color-accent;
+    }
+  }
+
+  &__qty-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+  }
+
+  &__price-subtotal {
+    font-size: 14px;
+    color: $color-accent;
+    margin-left: 10px;
+  }
+
+  &__price {
+    color: $color-accent;
+  }
+
+  &__actions {
+    flex: 1;
+  }
+  
+  &__info {
+    display: flex;
+    margin-bottom: 5px;
+  }
+}
