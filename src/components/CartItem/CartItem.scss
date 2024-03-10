@@ -2,6 +2,7 @@
 
 .cart-item {
   display: flex;
+  align-items: center;
   margin-bottom: 25px;
   font-size: 12px;
   font-weight: 500;
@@ -9,13 +10,17 @@
   &__image {
     width: 70px;
     height: 70px;
-    margin-right: 8px;
+  }
+
+  &__details {
+    margin-left: 12px;
   }
 
   &__title {
     font-weight: 500;
     color: $color-light;
-    margin-right: 8px;
+    margin-right: 12px;
+    max-width: 300px;
   }
 
   &__remove {
@@ -38,7 +43,7 @@
   &__price-subtotal {
     font-size: 14px;
     color: $color-accent;
-    margin-left: 10px;
+    margin-left: 12px;
   }
 
   &__price {
@@ -52,7 +57,7 @@
   &__info {
     display: flex;
     justify-content: space-between;
-    width: 360px;
+    width: 330px;
     margin-bottom: 5px;
   }
 }

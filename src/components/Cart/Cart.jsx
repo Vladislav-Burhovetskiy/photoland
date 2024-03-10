@@ -10,11 +10,25 @@ export default function Cart() {
 
   return (
     <div className="cart">
-      <div className="cart-close" onClick={() => setCartIsOpen(false)}>
-        <FiX />
+      <div className="cart-items">
+        <div className="cart-close" onClick={() => setCartIsOpen(false)}>
+          <FiX />
+        </div>
+        {cart.map((item) => (
+          <CartItem key={item.id} item={item} />
+        ))}
       </div>
-      {cart.map(item => <CartItem key={item.id} item={item} />)}
-      <p>$ {totalAmount}</p>
+      <div className="cart-options">
+        <p className="cart-options__total">Total: $ {totalAmount}</p>
+        {cart.length ? (
+          <div className="cart-options__buttons">
+            <button>Clear cart</button>
+            <button>Checkout</button>
+          </div>
+        ) : (
+          <p>Your cart is empty...</p>
+        )}
+      </div>
     </div>
   );
 }

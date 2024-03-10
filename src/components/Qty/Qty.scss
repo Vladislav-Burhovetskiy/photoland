@@ -2,5 +2,15 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 150px;
+  width: 120px;
+
+  &-total {
+    font-weight: 600;
+  }
+
+  &-btn {
+    font-size: 20px;
+    padding: 5px 15px;
+    width: 42px;
+  }
 }
