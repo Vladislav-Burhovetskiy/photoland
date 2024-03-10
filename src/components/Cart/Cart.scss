@@ -1,11 +1,12 @@
 @import "../../styles/utils.scss";
 
 .cart {
-  padding: 15px;
+  padding: 18px;
 
   &-items {
     overflow-y: auto;
     overflow-x: hidden;
+    scrollbar-color: $color-light-dark transparent;
     height: 75vh;
   }
 
@@ -16,16 +17,37 @@
   }
 
   &-options {
-    padding: 0 30px;
+    padding: 15px 20px;
 
     &__total {
+      display: flex;
+      justify-content: space-between;
       font-size: 20px;
       margin-bottom: 10px;
     }
 
     &__buttons {
       display: flex;
-      justify-content: space-between;
+    }
+
+    &__checkout-btn {
+      margin-left: 20px;
+      flex: 1;
+    }
+
+    &__checkout-arrow {
+      margin-left: 10px;
+      padding-top: 4px;
+    }
+
+    &__empty {
+      position: absolute;
+      top: 45%;
+      right: 50%;
+      transform: translateX(50%);
+      height: 100px;
+      width: 100px;
+      opacity: 0.05;
     }
   }
 }

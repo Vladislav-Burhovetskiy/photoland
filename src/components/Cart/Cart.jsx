@@ -1,7 +1,8 @@
 import PropTypes from "prop-types";
-// import { useState } from "react";
 import CartItem from "../CartItem/CartItem";
 import { useCartContext } from "../../hooks/useCartContext";
+import { FaCartShopping } from "react-icons/fa6";
+import { FaArrowRight } from "react-icons/fa6";
 import { FiX } from "react-icons/fi";
 import "./Cart.scss";
 
@@ -19,14 +20,23 @@ export default function Cart() {
         ))}
       </div>
       <div className="cart-options">
-        <p className="cart-options__total">Total: $ {totalAmount}</p>
+        <div className="cart-options__total">
+          <p>Total:</p>
+          <p>$ {totalAmount}</p>
+        </div>
         {cart.length ? (
           <div className="cart-options__buttons">
             <button>Clear cart</button>
-            <button>Checkout</button>
+            <button className="cart-options__checkout-btn">
+              Checkout
+              <FaArrowRight className="cart-options__checkout-arrow" />
+            </button>
           </div>
         ) : (
-          <p>Your cart is empty...</p>
+          <div>
+            <FaCartShopping className="cart-options__empty" />
+            <p>Your cart is empty...</p>
+          </div>
         )}
       </div>
     </div>
