@@ -7,7 +7,7 @@ import { useCartContext } from "../../hooks/useCartContext";
 import "./CartItem.scss";
 
 export default function CartItem({ item }) {
-  const { removeFromCart, updateAmount } = useCartContext();
+  const { removeFromCart } = useCartContext();
 
   return (
     <div className="cart-item">
@@ -30,12 +30,7 @@ export default function CartItem({ item }) {
         </div>
         <div className="cart-item__qty-container">
           <Qty item={item} />
-          <button onClick={() => updateAmount(-1, item.id)} className={item.amount === 0 ? "btn-disabled" : ""} disabled={item.amount === 0}>-</button>
-          <p>{item.amount}</p>
-          <button onClick={() => updateAmount(+1, item.id)}>+</button>
-          <p className="cart-item__price-subtotal">
-            $ {item.price * item.amount}
-          </p>
+          <p className="cart-item__price-subtotal">$ {item.price * item.amount}</p>
         </div>
         <p className="cart-item__price">${item.price} per piece</p>
       </div>

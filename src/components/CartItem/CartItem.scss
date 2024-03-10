@@ -51,6 +51,8 @@
   
   &__info {
     display: flex;
+    justify-content: space-between;
+    width: 360px;
     margin-bottom: 5px;
   }
 }

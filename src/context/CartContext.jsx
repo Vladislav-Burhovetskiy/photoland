@@ -8,10 +8,14 @@ export function CartProvider({ children }) {
   const [cart, setCart] = useState(
     JSON.parse(localStorage.getItem("cartItem")) || []
   );
-  // const [itemsAmount, setItemsAmount] = useState(0);
-  // const [totalAmount, settotalAmount] = useState(0);
+  const [itemsAmount, setItemsAmount] = useState(0);
+  const [totalAmount, setTotalAmount] = useState(0);
 
   useEffect(() => {
+    const amount = cart.reduce((a, b) => a + b.amount, 0)
+    setItemsAmount(amount)
+    const total = cart.reduce((a, b) => a + (b.amount * b.price), 0);
+    setTotalAmount(total);
     localStorage.setItem("cartItem", JSON.stringify(cart));
   }, [cart]);
 
@@ -52,7 +56,9 @@ export function CartProvider({ children }) {
         setCartIsOpen,
         addToCart,
         removeFromCart,
-        updateAmount
+        updateAmount,
+        itemsAmount,
+        totalAmount
       }}
     >
       {children}

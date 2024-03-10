@@ -6,7 +6,7 @@ import { FiX } from "react-icons/fi";
 import "./Cart.scss";
 
 export default function Cart() {
-  const { setCartIsOpen, cart } = useCartContext();
+  const { setCartIsOpen, cart, totalAmount } = useCartContext();
 
   return (
     <div className="cart">
@@ -14,6 +14,7 @@ export default function Cart() {
         <FiX />
       </div>
       {cart.map(item => <CartItem key={item.id} item={item} />)}
+      <p>$ {totalAmount}</p>
     </div>
   );
 }

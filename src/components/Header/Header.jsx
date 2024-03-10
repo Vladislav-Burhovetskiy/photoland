@@ -11,7 +11,7 @@ import Logo from "../../images/logo.png";
 import "./Header.scss";
 
 export default function Header() {
-  const { cartIsOpen, setCartIsOpen } = useCartContext();
+  const { cartIsOpen, setCartIsOpen, itemsAmount } = useCartContext();
   const [menuIsOpen, setMenuIsOpen] = useState(false);
 
   const openMenu = () => {
@@ -48,7 +48,7 @@ export default function Header() {
           </div>
           <div onClick={openCart} className="header-bag">
             <SlBag />
-            <p className="header-bag__count">50</p>
+            <p className="header-bag__count">{itemsAmount}</p>
           </div>
           <div className={`header-cart ${cartIsOpen && "show"}`}>
             <Cart />
