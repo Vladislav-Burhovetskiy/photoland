@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import Qty from "../Qty/Qty";
 import { CiCircleRemove } from "react-icons/ci";
 import { useCartContext } from "../../hooks/useCartContext";
-
 import "./CartItem.scss";
 
 export default function CartItem({ item }) {

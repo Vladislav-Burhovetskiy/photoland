@@ -13,9 +13,9 @@ export function CartProvider({ children }) {
 
   useEffect(() => {
     const amount = cart.reduce((a, b) => a + b.amount, 0)
+    const totalPrice = cart.reduce((a, b) => a + (b.amount * b.price), 0);
     setItemsAmount(amount)
-    const total = cart.reduce((a, b) => a + (b.amount * b.price), 0);
-    setTotalAmount(total);
+    setTotalAmount(totalPrice);
     localStorage.setItem("cartItem", JSON.stringify(cart));
   }, [cart]);
 
@@ -48,6 +48,10 @@ export function CartProvider({ children }) {
     setCart(updatedCart);
   }
 
+  function clearCart() {
+    setCart([])
+  }
+
   return (
     <CartContext.Provider
       value={{
@@ -57,6 +61,7 @@ export function CartProvider({ children }) {
         addToCart,
         removeFromCart,
         updateAmount,
+        clearCart,
         itemsAmount,
         totalAmount
       }}

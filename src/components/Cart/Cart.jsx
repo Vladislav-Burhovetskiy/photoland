@@ -7,7 +7,7 @@ import { FiX } from "react-icons/fi";
 import "./Cart.scss";
 
 export default function Cart() {
-  const { setCartIsOpen, cart, totalAmount } = useCartContext();
+  const { setCartIsOpen, cart, totalAmount, clearCart } = useCartContext();
 
   return (
     <div className="cart">
@@ -26,7 +26,7 @@ export default function Cart() {
         </div>
         {cart.length ? (
           <div className="cart-options__buttons">
-            <button>Clear cart</button>
+            <button onClick={clearCart}>Clear cart</button>
             <button className="cart-options__checkout-btn">
               Checkout
               <FaArrowRight className="cart-options__checkout-arrow" />
