@@ -8,7 +8,7 @@ export default function SearchForm({ openMenu }) {
   const navigate = useNavigate("");
   const [searchTerm, setSearchTerm] = useState("");
   const [isAnimating, setIsAnimating] = useState("");
-  const searchInput = document.querySelectorAll("input");
+  const searchInput = document.querySelectorAll("input[type='text']");
 
   useEffect(() => {
     const timeout = setTimeout(() => setIsAnimating(false), 1000);
