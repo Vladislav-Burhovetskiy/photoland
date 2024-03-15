@@ -8,11 +8,9 @@ export default function SearchForm({ openMenu }) {
   const navigate = useNavigate("");
   const [searchTerm, setSearchTerm] = useState("");
   const [isAnimating, setIsAnimating] = useState("");
-  const searchInput = document.querySelectorAll("input[type='text']");
 
   useEffect(() => {
     const timeout = setTimeout(() => setIsAnimating(false), 1000);
-
     return () => clearTimeout(timeout);
   });
 
@@ -25,10 +23,6 @@ export default function SearchForm({ openMenu }) {
 
     if (searchTerm.length > 0) {
       navigate(`/photoland/search?query=${searchTerm}`);
-
-      // i use 2 search-input
-      searchInput[0].value = "";
-      searchInput[1].value = "";
       setSearchTerm("");
     } else {
       setIsAnimating(true);
@@ -41,10 +35,10 @@ export default function SearchForm({ openMenu }) {
       className={`search-form ${isAnimating && "shake"}`}
     >
       <input
-        id="search-input"
         onChange={handleSearchInput}
         type="text"
         placeholder="Search by camera brand (Canon, Nikon, Sony...)"
+        value={searchTerm}
         className="search-input"
       />
       <button className="search-btn" onClick={openMenu}>
