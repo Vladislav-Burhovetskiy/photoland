@@ -1,7 +1,29 @@
+import { useState } from "react";
+import ModalSubscribe from "../Modal/ModalSubscribe";
 import { FaYoutube, FaFacebook, FaTwitter, FaInstagram } from "react-icons/fa";
 import "./Footer.scss";
 
 export default function Footer() {
+  const [subscribe, setSubscribe] = useState("");
+  const [on, setOn] = useState(false);
+
+  const handleOn = () => {
+    setOn(prevOn => !prevOn);
+  }
+
+  const handleSubscribeInput = (e) => {
+    setSubscribe(e.target.value);
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    if (subscribe.length > 0) {
+      setSubscribe("");
+      handleOn();
+    }
+  };
+
   return (
     <footer className="footer">
       <div className="container footer-container">
@@ -12,11 +34,13 @@ export default function Footer() {
             and more!
           </p>
         </div>
-        <form className="footer-form">
+        <form onSubmit={handleSubmit} className="footer-form">
           <input
+            onChange={handleSubscribeInput}
             type="email"
             placeholder="Your email..."
             className="footer-form__input"
+            value={subscribe}
           />
           <button className="footer-form__btn">Join</button>
         </form>
@@ -32,16 +56,16 @@ export default function Footer() {
           </a>
         </div>
         <div className="footer-social">
-          <a href="#">
+          <a href="#" className="footer-social__link">
             <FaYoutube />
           </a>
-          <a href="#">
+          <a href="#" className="footer-social__link">
             <FaFacebook />
           </a>
-          <a href="#">
+          <a href="#" className="footer-social__link">
             <FaInstagram />
           </a>
-          <a href="#">
+          <a href="#" className="footer-social__link">
             <FaTwitter />
           </a>
         </div>
@@ -57,6 +81,7 @@ export default function Footer() {
         </a>
         <p> 2024 / Burhovetskiy</p>
       </div>
+      {on && <ModalSubscribe handleOn={handleOn} />}
     </footer>
   );
 }
