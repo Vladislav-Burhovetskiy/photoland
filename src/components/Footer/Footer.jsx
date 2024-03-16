@@ -9,7 +9,7 @@ export default function Footer() {
 
   const handleOn = () => {
     setOn(prevOn => !prevOn);
-  }
+  };
 
   const handleSubscribeInput = (e) => {
     setSubscribe(e.target.value);
