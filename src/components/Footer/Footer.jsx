@@ -1,15 +1,18 @@
 import { useState } from "react";
 import ModalSubscribe from "../Modal/ModalSubscribe";
+import useToggle from "../../hooks/useToggle";
 import { FaYoutube, FaFacebook, FaTwitter, FaInstagram } from "react-icons/fa";
 import "./Footer.scss";
 
 export default function Footer() {
+  const [on, handleToggle] = useToggle();
+  console.log(on)
   const [subscribe, setSubscribe] = useState("");
-  const [on, setOn] = useState(false);
+  // const [on, setOn] = useState(false);
 
-  const handleOn = () => {
-    setOn(prevOn => !prevOn);
-  };
+  // const handleOn = () => {
+  //   setOn(prevOn => !prevOn);
+  // };
 
   const handleSubscribeInput = (e) => {
     setSubscribe(e.target.value);
@@ -20,7 +23,7 @@ export default function Footer() {
 
     if (subscribe.length > 0) {
       setSubscribe("");
-      handleOn();
+      handleToggle();
     }
   };
 
@@ -81,7 +84,7 @@ export default function Footer() {
         </a>
         <p> 2024 / Burhovetskiy</p>
       </div>
-      {on && <ModalSubscribe handleOn={handleOn} />}
+      {on && <ModalSubscribe handleOn={handleToggle}/>}
     </footer>
   );
 }
