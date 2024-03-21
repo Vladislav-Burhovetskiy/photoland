@@ -1,7 +1,11 @@
 import PropTypes from "prop-types";
-import ProductSlider from "../ProductSlider/ProductSlider";
 import { useDataContext } from "../../hooks/useDataContext";
 import "./LatestProducts.scss";
+import { lazy, Suspense } from "react";
+
+const ProductSlider = lazy(() => {
+  return import("../ProductSlider/ProductSlider");
+});
 
 export default function LatestProducts() {
   const { data } = useDataContext();
@@ -12,7 +16,9 @@ export default function LatestProducts() {
       <div>
         <h2 className="latest-products__title">Latest Products</h2>
       </div>
-      <ProductSlider data={isNewCamera} />
+      <Suspense fallback={<h2>Loading...</h2>}>
+        <ProductSlider data={isNewCamera} />
+      </Suspense>
     </div>
   );
 }
