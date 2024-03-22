@@ -3,7 +3,8 @@ import { Link } from "react-router-dom";
 import { useDataContext } from "../../hooks/useDataContext";
 import "./CategoryNav.scss";
 
-export default function CategoryNav({ openMenu }) {
+export default function CategoryNav({ closeMenu }) {
+  console.log(closeMenu);
   const { data } = useDataContext();
   const allCategories = data?.map((item) => item.categories);
   const uniqueCategories = [...new Set(allCategories)];
@@ -13,8 +14,14 @@ export default function CategoryNav({ openMenu }) {
       <div className="nav-title">BROWSE CATEGORIES</div>
       <div className="nav-categories">
         {uniqueCategories.map((category) => (
-          <Link to={`/photoland/products/${category}`} className="nav-category" key={category} onClick={openMenu}>
-            {category}
+          <Link
+            to={`/photoland/products/${category}`}
+            className="nav-category"
+            key={category}
+          >
+            <div onClick={closeMenu ? () => closeMenu() : undefined}>
+              {category}
+            </div>
           </Link>
         ))}
       </div>
@@ -23,5 +30,5 @@ export default function CategoryNav({ openMenu }) {
 }
 
 CategoryNav.propTypes = {
-  openMenu: PropTypes.func,
+  closeMenu: PropTypes.func,
 };

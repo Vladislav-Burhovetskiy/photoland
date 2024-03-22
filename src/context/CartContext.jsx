@@ -1,10 +1,11 @@
 import PropTypes from "prop-types";
 import { createContext, useEffect, useState } from "react";
+import useToggle from "../hooks/useToggle";
 
 export const CartContext = createContext();
 
 export function CartProvider({ children }) {
-  const [cartIsOpen, setCartIsOpen] = useState(false);
+  const [cartIsOpen, toggleCart] = useToggle();
   const [cart, setCart] = useState(
     JSON.parse(localStorage.getItem("cartItem")) || []
   );
@@ -33,7 +34,7 @@ export function CartProvider({ children }) {
       setCart([...cart, newItem]);
     }
 
-    setCartIsOpen(true);
+    !cartIsOpen && toggleCart();
   }
 
   function removeFromCart(id) {
@@ -57,7 +58,7 @@ export function CartProvider({ children }) {
       value={{
         cart,
         cartIsOpen,
-        setCartIsOpen,
+        toggleCart,
         addToCart,
         removeFromCart,
         updateAmount,

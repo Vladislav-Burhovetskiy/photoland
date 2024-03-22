@@ -7,12 +7,12 @@ import { FiX } from "react-icons/fi";
 import "./Cart.scss";
 
 export default function Cart() {
-  const { setCartIsOpen, cart, totalAmount, clearCart } = useCartContext();
+  const { toggleCart, cart, totalAmount, clearCart } = useCartContext();
 
   return (
     <div className="cart">
       <div className="cart-items">
-        <div className="cart-close" onClick={() => setCartIsOpen(false)}>
+        <div className="cart-close" onClick={() => toggleCart()}>
           <FiX />
         </div>
         {cart.map((item) => (

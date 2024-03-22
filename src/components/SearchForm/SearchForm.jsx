@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 import "./SearchForm.scss";
 
-export default function SearchForm({ openMenu }) {
+export default function SearchForm({ closeMenu }) {
   const navigate = useNavigate("");
   const [searchTerm, setSearchTerm] = useState("");
   const [isAnimating, setIsAnimating] = useState("");
@@ -41,7 +41,10 @@ export default function SearchForm({ openMenu }) {
         value={searchTerm}
         className="search-input"
       />
-      <button className="search-btn" onClick={openMenu}>
+      <button
+        className="search-btn"
+        onClick={closeMenu && searchTerm ? () => closeMenu() : undefined}
+      >
         <FiSearch />
       </button>
     </form>
@@ -49,5 +52,5 @@ export default function SearchForm({ openMenu }) {
 }
 
 SearchForm.propTypes = {
-  openMenu: PropTypes.func,
+  closeMenu: PropTypes.func,
 };

@@ -3,7 +3,7 @@ import Modal from "./Modal";
 import { FiX } from "react-icons/fi";
 import "./ModalSubscribe.scss";
 
-export default function ModalSubscribe({ handleOn }) {
+export default function ModalSubscribe({ modalToggle }) {
   return (
     <Modal>
       <div className="modal">
@@ -12,7 +12,7 @@ export default function ModalSubscribe({ handleOn }) {
           <p className="modal-text">
             Wait for the newsletter about the latest products
           </p>
-          <div className="modal-close" onClick={handleOn}>
+          <div className="modal-close" onClick={modalToggle}>
             <FiX className="modal-close__btn" />
           </div>
         </div>
@@ -22,5 +22,5 @@ export default function ModalSubscribe({ handleOn }) {
 }
 
 ModalSubscribe.propTypes = {
-  handleOn: PropTypes.func,
+  modalToggle: PropTypes.func,
 };

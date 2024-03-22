@@ -8,12 +8,12 @@ export default function CategoryMenuMobile({ closeMenu }) {
   return (
     <div className="mobile-menu">
       <div className="mobile-menu__fix-container">
-        <FiX onClick={closeMenu} className="mobile-menu__fix" />
+        <FiX onClick={() => closeMenu()} className="mobile-menu__fix" />
       </div>
       <div className="mobile-menu__search">
-        <SearchForm openMenu={closeMenu} />
+        <SearchForm closeMenu={closeMenu} />
       </div>
-      <CategoryNav openMenu={closeMenu} />
+      <CategoryNav closeMenu={closeMenu} />
     </div>
   );
 }
