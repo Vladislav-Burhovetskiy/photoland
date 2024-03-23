@@ -11,11 +11,7 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    height: 330px;
-
-    @include onSmallTablet {
-      height: 300px;
-    }
+    height: 400px;
   }
 
   &-title {
@@ -26,36 +22,6 @@
   &-description {
     min-width: 320px;
     opacity: 0.7;
-  }
-
-  &-form {
-    position: relative;
-    width: 100%;
-
-    @include onSmallTablet {
-      width: 350px;
-    }
-
-    &.shake {
-      animation: shake 0.2s;
-    }
-
-    &__input {
-      font-size: 14px;
-      width: 100%;
-      padding: 10px 15px;
-      background: $color-light;
-      border-radius: 8px;
-      border: none;
-      outline: none;
-    }
-
-    &__btn {
-      position: absolute;
-      right: 0;
-      padding: 8px 25px;
-      border-radius: 0 8px 8px 0;
-    }
   }
 
   &-policy {
@@ -92,23 +58,5 @@
     gap: 4px;
     padding: 40px 0;
     box-shadow: 0px -1.2px 0px -1px $color-accent;
-  }
-}
-
-@keyframes shake {
-  0% {
-    transform: translateX(0);
-  }
-  25% {
-    transform: translateX(5px);
-  }
-  50% {
-    transform: translateX(-7px);
-  }
-  75% {
-    transform: translateX(5px);
-  }
-  100% {
-    transform: translateX(0);
   }
 }

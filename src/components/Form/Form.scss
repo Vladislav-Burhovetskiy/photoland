@@ -1,0 +1,20 @@
+@import "../../styles/utils.scss";
+@import "../../styles/animations/shake.scss";
+
+.shared {
+  &-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 350px;
+
+    &.shake {
+      animation: shake 0.2s;
+    }
+
+    &__btn {
+      width: 100%;
+      text-transform: uppercase;
+    }
+  }
+}

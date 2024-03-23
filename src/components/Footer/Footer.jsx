@@ -1,4 +1,5 @@
-import { useState } from "react";
+// import { useState } from "react";
+import Form from "../Form/Form";
 import ModalSubscribe from "../Modal/ModalSubscribe";
 import useToggle from "../../hooks/useToggle";
 import { FaYoutube, FaFacebook, FaTwitter, FaInstagram } from "react-icons/fa";
@@ -6,19 +7,9 @@ import "./Footer.scss";
 
 export default function Footer() {
   const [modalIsOpen, toggleModal] = useToggle();
-  const [subscribe, setSubscribe] = useState("");
 
-  const handleSubscribeInput = (e) => {
-    setSubscribe(e.target.value);
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-
-    if (subscribe.length > 0) {
-      setSubscribe("");
-      toggleModal();
-    }
+  const handleSubmit = () => {
+    // записує данні в базу підписників
   };
 
   return (
@@ -31,16 +22,14 @@ export default function Footer() {
             and more!
           </p>
         </div>
-        <form onSubmit={handleSubmit} className="footer-form">
-          <input
-            onChange={handleSubscribeInput}
-            type="email"
-            placeholder="Your email..."
-            className="footer-form__input"
-            value={subscribe}
-          />
-          <button className="footer-form__btn">Join</button>
-        </form>
+        <Form
+          onSubmit={handleSubmit}
+          type="email"
+          placeholder="Your email..."
+          buttonContent="Join"
+          className="footer-form"
+          toggleModal={toggleModal}
+        />
         <div className="footer-policy">
           <a href="#" className="footer-policy__link">
             Returns Policy
@@ -78,7 +67,7 @@ export default function Footer() {
         </a>
         <p> 2024 / Burhovetskiy</p>
       </div>
-      {modalIsOpen && <ModalSubscribe toggleModal={toggleModal}/>}
+      {modalIsOpen && <ModalSubscribe toggleModal={toggleModal} />}
     </footer>
   );
 }

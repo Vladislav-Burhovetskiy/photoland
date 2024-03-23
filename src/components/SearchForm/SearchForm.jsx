@@ -1,12 +1,12 @@
 import PropTypes from "prop-types";
-import { FiSearch } from "react-icons/fi";
-import { useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { FiSearch } from "react-icons/fi";
 import "./SearchForm.scss";
 
 export default function SearchForm({ closeMenu }) {
   const navigate = useNavigate("");
-  const [searchTerm, setSearchTerm] = useState("");
+  const [inputValue, setInputValue] = useState("");
   const [isAnimating, setIsAnimating] = useState("");
 
   useEffect(() => {
@@ -15,15 +15,15 @@ export default function SearchForm({ closeMenu }) {
   });
 
   const handleSearchInput = (e) => {
-    setSearchTerm(e.target.value);
+    setInputValue(e.target.value);
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    if (searchTerm.length > 0) {
-      navigate(`/photoland/search?query=${searchTerm}`);
-      setSearchTerm("");
+    if (inputValue.trim() !== "") {
+      navigate(`/photoland/search?query=${inputValue}`);
+      setInputValue("");
     } else {
       setIsAnimating(true);
     }
@@ -38,15 +38,20 @@ export default function SearchForm({ closeMenu }) {
         onChange={handleSearchInput}
         type="text"
         placeholder="Search by camera brand (Canon, Nikon, Sony...)"
-        value={searchTerm}
-        className="search-input"
+        value={inputValue}
       />
-      <button
-        className="search-btn"
-        onClick={closeMenu && searchTerm ? () => closeMenu() : undefined}
-      >
-        <FiSearch />
-      </button>
+      {closeMenu ? (
+        <button
+          className="search-btn"
+          onClick={() => inputValue && closeMenu()}
+        >
+          <FiSearch />
+        </button>
+      ) : (
+        <button className="search-btn">
+          <FiSearch />
+        </button>
+      )}
     </form>
   );
 }

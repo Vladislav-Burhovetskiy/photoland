@@ -19,9 +19,11 @@ export default function CategoryNav({ closeMenu }) {
             className="nav-category"
             key={category}
           >
-            <div onClick={closeMenu ? () => closeMenu() : undefined}>
-              {category}
-            </div>
+            {closeMenu ? (
+              <div onClick={() => closeMenu()}>{category}</div>
+            ) : (
+              category
+            )}
           </Link>
         ))}
       </div>
