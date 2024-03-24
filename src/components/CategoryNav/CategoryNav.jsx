@@ -4,7 +4,6 @@ import { useDataContext } from "../../hooks/useDataContext";
 import "./CategoryNav.scss";
 
 export default function CategoryNav({ closeMenu }) {
-  console.log(closeMenu);
   const { data } = useDataContext();
   const allCategories = data?.map((item) => item.categories);
   const uniqueCategories = [...new Set(allCategories)];

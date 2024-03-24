@@ -9,10 +9,19 @@ import CategoryMenuMobile from "../CategoryMenuMobile/CategoryMenuMobile";
 import useToggle from "../../hooks/useToggle";
 import Logo from "../../images/logo.png";
 import "./Header.scss";
+import { useState } from "react";
 
 export default function Header() {
   const { cartIsOpen, toggleCart, itemsAmount } = useCartContext();
   const [menuIsOpen, toggleMenu] = useToggle();
+  const [user, setUser] = useState(
+    JSON.parse(localStorage.getItem("user")) || "User"
+  );
+
+  const clearUser = () => {
+    localStorage.removeItem("user");
+    setUser("User");
+  };
 
   return (
     <header className="header">
@@ -34,10 +43,17 @@ export default function Header() {
           <SearchForm />
         </div>
         <div className="header-actions">
-          <button className="header-btn">login-in</button>
+          <Link to={"/photoland/login"}>
+            <button onClick={() => user !== "User" && clearUser()} className="header-btn">
+              {user !== "User" ? "Logout" : "Login"}
+            </button>
+          </Link>
+
           <div className="header-avatar">
             <HiOutlineUserCircle strokeWidth={1} />
           </div>
+          <p className="header-user">{user[0].toUpperCase()}</p>
+
           <div onClick={toggleCart} className="header-bag">
             <SlBag />
             <p className="header-bag__count">{itemsAmount}</p>

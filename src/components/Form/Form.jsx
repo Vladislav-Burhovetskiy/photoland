@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import "./Form.scss";
 
 export default function Form(props) {
-  const { onSubmit, type, placeholder, buttonContent, toggleModal } = props;
+  const { onSubmit, type, placeholder, buttonContent } = props;
   const [inputValue, setInputValue] = useState("");
   const [isAnimating, setIsAnimating] = useState("");
 
@@ -20,7 +20,7 @@ export default function Form(props) {
     e.preventDefault();
 
     if (inputValue.trim() !== "") {
-      onSubmit();
+      onSubmit(inputValue);
       setInputValue("");
     } else {
       setIsAnimating(true);
@@ -38,11 +38,7 @@ export default function Form(props) {
         value={inputValue}
         onChange={handleChange}
       />
-      <button
-        type="submit"
-        className="shared-form__btn"
-        onClick={() => inputValue && toggleModal()}
-      >
+      <button type="submit" className="shared-form__btn">
         {buttonContent}
       </button>
     </form>
@@ -51,7 +47,6 @@ export default function Form(props) {
 
 Form.propTypes = {
   onSubmit: PropTypes.func.isRequired,
-  toggleModal: PropTypes.func.isRequired,
   type: PropTypes.string,
   placeholder: PropTypes.string.isRequired,
   buttonContent: PropTypes.node.isRequired,

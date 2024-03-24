@@ -4,6 +4,7 @@ import Home from "../pages/Home.jsx";
 import ProductsCategory from "../pages/ProductsCategory.jsx";
 import ProductDetails from "../pages/ProductDetails.jsx";
 import Search from "../pages/Search.jsx";
+import Login from "../pages/Login.jsx";
 
 export default function MyRoutes() {
   return (
@@ -13,6 +14,7 @@ export default function MyRoutes() {
         <Route path="products/:category" element={<ProductsCategory />} />
         <Route path="product/:id" element={<ProductDetails />} />
         <Route path="search" element={<Search />} />
+        <Route path="login" element={<Login />} />
       </Route>
     </Routes>
   );

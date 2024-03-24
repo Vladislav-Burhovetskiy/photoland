@@ -9,6 +9,7 @@ export default function Footer() {
   const [modalIsOpen, toggleModal] = useToggle();
 
   const handleSubmit = () => {
+    toggleModal()
     // записує данні в базу підписників
   };
 
@@ -28,7 +29,6 @@ export default function Footer() {
           placeholder="Your email..."
           buttonContent="Join"
           className="footer-form"
-          toggleModal={toggleModal}
         />
         <div className="footer-policy">
           <a href="#" className="footer-policy__link">

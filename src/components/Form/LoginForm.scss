@@ -1,0 +1,26 @@
+@import "../../styles/utils.scss";
+
+.login {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 400px;
+  padding: 70px 45px;
+  margin: 98px auto 20px;
+  border: 0.5px solid $color-accent;
+  border-radius: 8px;
+  background: rgba(0, 0, 0, 0.45);
+  backdrop-filter: blur(2px);
+
+  &-avatar {
+    height: 200px;
+    width: 200px;
+    stroke-width: 0.2px;
+    margin-bottom: 10px;
+  }
+
+  &-text {
+    margin-bottom: 20px;
+  }
+}

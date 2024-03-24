@@ -17,9 +17,9 @@ export default function ProductDetails() {
   });
 
   return (
-    <section className="container">
+    <div className="container">
       <ProductInfo camera={camera} />
       <RelatedProduct category={camera.categories}/>
-    </section>
+    </div>
   );
 }

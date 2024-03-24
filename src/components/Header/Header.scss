@@ -65,6 +65,13 @@
     margin: auto 0;
   }
 
+  &-user {
+    color: $color-accent;
+    padding: 0 6px;
+    border: 1px solid $color-accent;
+    border-radius: 50%;
+  }
+
   &-btn {
     font-size: 16px;
     font-weight: normal;
