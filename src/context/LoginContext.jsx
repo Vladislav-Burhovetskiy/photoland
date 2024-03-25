@@ -1,19 +1,24 @@
 import PropTypes from "prop-types";
 import { createContext, useState } from "react";
+import {
+  addToLocalStorage,
+  removeFromLocalStorage,
+  getFromLocalStorage,
+} from "../helpers/localStorage.js";
 
 export const LoginContext = createContext();
 
 export function LoginProvider({ children }) {
-  const [user, setUser] = useState("");
+  const [user, setUser] = useState(getFromLocalStorage("user") || "");
 
   const handleLogout = () => {
-    localStorage.removeItem("user");
+    removeFromLocalStorage("user");
     setUser("");
   };
 
   const handleLogin = (username) => {
-    localStorage.setItem("user", JSON.stringify(username));
-    const newUser = JSON.parse(localStorage.getItem("user"))
+    addToLocalStorage("user", username)
+    const newUser = getFromLocalStorage("user");
     setUser(newUser);
   };
 

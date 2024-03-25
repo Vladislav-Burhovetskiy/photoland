@@ -20,7 +20,7 @@ export default function Header() {
   if (user) {
     username = user[0].toUpperCase() + user.slice(1);
     if (user.length > 9) {
-      username = username.substring(0, 6) + "...";
+      username = username.substring(0, 5) + "...";
     }
   }
 

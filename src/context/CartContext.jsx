@@ -1,13 +1,18 @@
 import PropTypes from "prop-types";
 import { createContext, useEffect, useState } from "react";
 import useToggle from "../hooks/useToggle";
+import {
+  addToLocalStorage,
+  // removeFromLocalStorage,
+  getFromLocalStorage,
+} from "../helpers/localStorage.js";
 
 export const CartContext = createContext();
 
 export function CartProvider({ children }) {
   const [cartIsOpen, toggleCart] = useToggle();
   const [cart, setCart] = useState(
-    JSON.parse(localStorage.getItem("cartItem")) || []
+    getFromLocalStorage("cartItem") || []
   );
   const [itemsAmount, setItemsAmount] = useState(0);
   const [totalAmount, setTotalAmount] = useState(0);
@@ -17,7 +22,7 @@ export function CartProvider({ children }) {
     const totalPrice = cart.reduce((a, b) => a + (b.amount * b.price), 0);
     setItemsAmount(amount)
     setTotalAmount(totalPrice);
-    localStorage.setItem("cartItem", JSON.stringify(cart));
+    addToLocalStorage("cartItem", cart);
   }, [cart]);
 
   function addToCart(item) {
