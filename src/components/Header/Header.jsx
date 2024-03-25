@@ -7,21 +7,22 @@ import SearchForm from "../SearchForm/SearchForm";
 import Cart from "../Cart/Cart";
 import CategoryMenuMobile from "../CategoryMenuMobile/CategoryMenuMobile";
 import useToggle from "../../hooks/useToggle";
+import { useLoginContext } from "../../hooks/useLoginContext";
 import Logo from "../../images/logo.png";
 import "./Header.scss";
-import { useState } from "react";
 
 export default function Header() {
   const { cartIsOpen, toggleCart, itemsAmount } = useCartContext();
+  const { user, handleLogout } = useLoginContext();
   const [menuIsOpen, toggleMenu] = useToggle();
-  const [user, setUser] = useState(
-    JSON.parse(localStorage.getItem("user")) || "User"
-  );
+  let username = "";
 
-  const clearUser = () => {
-    localStorage.removeItem("user");
-    setUser("User");
-  };
+  if (user) {
+    username = user[0].toUpperCase() + user.slice(1);
+    if (user.length > 9) {
+      username = username.substring(0, 6) + "...";
+    }
+  }
 
   return (
     <header className="header">
@@ -44,15 +45,20 @@ export default function Header() {
         </div>
         <div className="header-actions">
           <Link to={"/photoland/login"}>
-            <button onClick={() => user !== "User" && clearUser()} className="header-btn">
-              {user !== "User" ? "Logout" : "Login"}
+            <button
+              onClick={() => user && handleLogout()}
+              className="header-btn"
+            >
+              {user ? "Logout" : "Login"}
             </button>
           </Link>
-
-          <div className="header-avatar">
-            <HiOutlineUserCircle strokeWidth={1} />
-          </div>
-          <p className="header-user">{user[0].toUpperCase()}</p>
+          {user ? (
+            <p className="header-user">{username}</p>
+          ) : (
+            <div className="header-avatar">
+              <HiOutlineUserCircle strokeWidth={1} />
+            </div>
+          )}
 
           <div onClick={toggleCart} className="header-bag">
             <SlBag />
