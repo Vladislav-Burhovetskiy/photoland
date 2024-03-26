@@ -1,6 +1,5 @@
-// import { useState } from "react";
 import Form from "../Form/Form";
-import ModalSubscribe from "../Modal/ModalSubscribe";
+import Modal from "../Modal/Modal";
 import useToggle from "../../hooks/useToggle";
 import { FaYoutube, FaFacebook, FaTwitter, FaInstagram } from "react-icons/fa";
 import "./Footer.scss";
@@ -9,8 +8,7 @@ export default function Footer() {
   const [modalIsOpen, toggleModal] = useToggle();
 
   const handleSubmit = () => {
-    toggleModal()
-    // записує данні в базу підписників
+    toggleModal();
   };
 
   return (
@@ -67,7 +65,13 @@ export default function Footer() {
         </a>
         <p> 2024 / Burhovetskiy</p>
       </div>
-      {modalIsOpen && <ModalSubscribe toggleModal={toggleModal} />}
+      {modalIsOpen && (
+        <Modal
+          title="You are subscribed!"
+          text="Wait for the newsletter about the latest products"
+          toggleModal={toggleModal}
+        />
+      )}
     </footer>
   );
 }

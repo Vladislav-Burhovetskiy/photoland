@@ -1,6 +1,9 @@
 import PropTypes from "prop-types";
 import CartItem from "../CartItem/CartItem";
+import Modal from "../Modal/Modal";
 import { useCartContext } from "../../hooks/useCartContext";
+import { useLoginContext } from "../../hooks/useLoginContext";
+import useToggle from "../../hooks/useToggle";
 import { FaCartShopping } from "react-icons/fa6";
 import { FaArrowRight } from "react-icons/fa6";
 import { FiX } from "react-icons/fi";
@@ -8,6 +11,22 @@ import "./Cart.scss";
 
 export default function Cart() {
   const { toggleCart, cart, totalAmount, clearCart } = useCartContext();
+  const { user } = useLoginContext();
+  const [modalIsOpen, toggleModal] = useToggle();
+
+  function handleOrder() {
+    if (user) {
+      clearCart();
+    }
+
+    toggleModal();
+    toggleCart();
+  }
+
+  const modalTitle = user ? "Ordered Successfully!" : "Login first!";
+  const modalText = user
+    ? "We will contact you after processing the order"
+    : "Please login first to place an order";
 
   return (
     <div className="cart">
@@ -27,8 +46,11 @@ export default function Cart() {
         {cart.length ? (
           <div className="cart-options__buttons">
             <button onClick={clearCart}>Clear cart</button>
-            <button className="cart-options__checkout-btn">
-              Checkout
+            <button
+              className="cart-options__checkout-btn"
+              onClick={toggleModal}
+            >
+              Order now
               <FaArrowRight className="cart-options__checkout-arrow" />
             </button>
           </div>
@@ -39,6 +61,9 @@ export default function Cart() {
           </div>
         )}
       </div>
+      {modalIsOpen && (
+        <Modal title={modalTitle} text={modalText} toggleModal={handleOrder} />
+      )}
     </div>
   );
 }
