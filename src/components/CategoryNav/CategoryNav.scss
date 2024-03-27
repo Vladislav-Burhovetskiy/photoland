@@ -28,4 +28,13 @@
     padding: 10px 0;
     text-transform: uppercase;
   }
+
+  &-filter {
+    padding: 0 14px;
+    cursor: pointer;
+    
+    @include onLargeDesktop {
+      margin-top: 20px;
+    }
+  }
 }

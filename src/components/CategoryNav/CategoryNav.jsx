@@ -1,5 +1,6 @@
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
+import FilterByPrice from "../FilterByPrice/FilterByPrice";
 import { useDataContext } from "../../hooks/useDataContext";
 import "./CategoryNav.scss";
 
@@ -25,6 +26,9 @@ export default function CategoryNav({ closeMenu }) {
             )}
           </Link>
         ))}
+      </div>
+      <div className="nav-filter">
+        <FilterByPrice />
       </div>
     </aside>
   );

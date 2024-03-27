@@ -47,10 +47,13 @@ export default function Cart() {
           <div className="cart-options__buttons">
             <button onClick={clearCart}>Clear cart</button>
             <button
-              className="cart-options__checkout-btn"
+              disabled={!totalAmount}
+              className={`cart-options__checkout-btn ${
+                !totalAmount ? "btn-disabled" : ""
+              }`}
               onClick={toggleModal}
             >
-              Order now
+              Purchase
               <FaArrowRight className="cart-options__checkout-arrow" />
             </button>
           </div>
