@@ -1,30 +1,47 @@
 import PropTypes from "prop-types";
-import { useState } from "react";
-// import { useNavigate } from "react-router-dom";
+import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
+import {
+  addToLocalStorage,
+  getFromLocalStorage,
+  removeFromLocalStorage,
+} from "../../helpers/localStorage.js";
 import "./FilterByPrice.scss";
 
 export default function FilterByPrice({ closeMenu }) {
-  // const navigate = useNavigate("");
-  const [selectedPrice, setSelectedPrice] = useState("");
+  const [selectedPrice, setSelectedPrice] = useState(
+    getFromLocalStorage("filter") || ""
+  );
+  const navigate = useNavigate();
 
   const handleSelectChange = (e) => {
-    setSelectedPrice(e.target.value);
+    const selectedValue = e.target.value;
+    addToLocalStorage("filter", selectedValue);
+    setSelectedPrice(selectedValue);
+
+    selectedValue
+      ? navigate(`/photoland/filter?${selectedValue}`)
+      : navigate(`/photoland/`);
+
+    closeMenu && closeMenu();
   };
+
+  useEffect(() => {
+      removeFromLocalStorage("filter");
+  }, [selectedPrice]);
 
   return (
     <div>
       <select
         value={selectedPrice}
         onChange={handleSelectChange}
-        className="price-select"
+        className="price-filter__select"
       >
-        <option value="" selected>
-          Select price options...
-        </option>
-        <option value="option1">All cameras</option>
-        <option value="option2">0-799 $</option>
-        <option value="option3">800-2000 $</option>
-        <option value="option4">2000+ $</option>
+        <option value="">Select price options...</option>
+        <option value="minPrice=&maxPrice=">All cameras</option>
+        <option value="minPrice=0&maxPrice=799">0 - 799 $</option>
+        <option value="minPrice=800&maxPrice=2000">800 - 2000 $</option>
+        <option value="minPrice=2000&maxPrice=">2000 + $</option>
       </select>
     </div>
   );
@@ -33,14 +50,3 @@ export default function FilterByPrice({ closeMenu }) {
 FilterByPrice.propTypes = {
   closeMenu: PropTypes.func,
 };
-
-// const handleSubmit = (e) => {
-//   e.preventDefault();
-
-//   if (inputValue.trim() !== "") {
-//     navigate(`/photoland/search?query=${inputValue}`);
-//     setInputValue("");
-//   } else {
-//     setIsAnimating(true);
-//   }
-// };

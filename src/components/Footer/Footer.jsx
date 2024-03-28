@@ -1,7 +1,7 @@
 import Form from "../Form/Form";
 import Modal from "../Modal/Modal";
 import useToggle from "../../hooks/useToggle";
-import { FaYoutube, FaFacebook, FaTwitter, FaInstagram } from "react-icons/fa";
+import { FaYoutube, FaFacebook, FaXTwitter, FaInstagram } from "react-icons/fa6";
 import "./Footer.scss";
 
 export default function Footer() {
@@ -50,7 +50,7 @@ export default function Footer() {
             <FaInstagram />
           </a>
           <a href="#" className="footer-social__link">
-            <FaTwitter />
+            <FaXTwitter />
           </a>
         </div>
       </div>

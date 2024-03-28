@@ -30,11 +30,8 @@
   }
 
   &-filter {
-    padding: 0 14px;
+    padding: 0 15px;
+    margin-top: 20px;
     cursor: pointer;
-    
-    @include onLargeDesktop {
-      margin-top: 20px;
-    }
   }
 }
