@@ -9,6 +9,7 @@ export default function RelatedProduct({ category }) {
   const productsCategory = data?.filter(
     (camera) => camera.categories === category
   );
+  
   return (
     <div>
       <h2 className="related-title">Related Products</h2>

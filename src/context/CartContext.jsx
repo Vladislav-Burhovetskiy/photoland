@@ -3,7 +3,6 @@ import { createContext, useEffect, useState } from "react";
 import useToggle from "../hooks/useToggle";
 import {
   addToLocalStorage,
-  // removeFromLocalStorage,
   getFromLocalStorage,
 } from "../helpers/localStorage.js";
 

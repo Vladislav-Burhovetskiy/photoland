@@ -2,6 +2,7 @@ import { useParams } from "react-router-dom";
 import ProductInfo from "../components/ProductInfo/ProductInfo";
 import RelatedProduct from "../components/RelatedProduct/RelatedProduct";
 import { useDataContext } from "../hooks/useDataContext";
+import findById from "../helpers/findById.js";
 import SpinnerLoading from "../components/Spinner/SpinnerLoading";
 
 export default function ProductDetails() {
@@ -12,9 +13,10 @@ export default function ProductDetails() {
     return <SpinnerLoading />;
   }
 
-  const camera = data?.find((product) => {
-    return product.id === +id;
-  });
+  const camera = findById(data, +id);
+  // const camera = data?.find((product) => {
+  //   return product.id === +id;
+  // });
 
   return (
     <div className="container">
