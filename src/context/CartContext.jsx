@@ -5,6 +5,7 @@ import {
   addToLocalStorage,
   getFromLocalStorage,
 } from "../helpers/localStorage.js";
+import findById from "../helpers/findById.js";
 
 export const CartContext = createContext();
 
@@ -47,8 +48,10 @@ export function CartProvider({ children }) {
   }
 
   function updateAmount(num, id) {
-    const existingItemIndex = cart.findIndex((cartItem) => cartItem.id === id);
+    const existingItem = findById(cart, id);
+    const existingItemIndex = cart.indexOf(existingItem);
     const updatedCart = [...cart];
+    
     updatedCart[existingItemIndex].amount += num;
     setCart(updatedCart);
   }

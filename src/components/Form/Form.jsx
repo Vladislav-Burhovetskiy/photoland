@@ -6,6 +6,7 @@ export default function Form(props) {
   const { onSubmit, type, placeholder, buttonContent } = props;
   const [inputValue, setInputValue] = useState("");
   const [isAnimating, setIsAnimating] = useState("");
+  const minLength = inputValue.length > 0 && inputValue.length < 3;
 
   useEffect(() => {
     const timeout = setTimeout(() => setIsAnimating(false), 1000);
@@ -38,7 +39,11 @@ export default function Form(props) {
         value={inputValue}
         onChange={handleChange}
       />
-      <button type="submit" className="shared-form__btn">
+      <button
+        type="submit"
+        className={`shared-form__btn ${minLength ? "btn-disabled" : ""}`}
+        disabled={minLength}
+      >
         {buttonContent}
       </button>
     </form>
