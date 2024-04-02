@@ -3,10 +3,12 @@ import { useState, useEffect } from "react";
 import "./Form.scss";
 
 export default function Form(props) {
-  const { onSubmit, type, placeholder, buttonContent } = props;
+  const { onSubmit, type, placeholder, buttonContent, maxValue } = props;
   const [inputValue, setInputValue] = useState("");
   const [isAnimating, setIsAnimating] = useState("");
-  const minLength = inputValue.length > 0 && inputValue.length < 3;
+  const correctLength =
+    (inputValue.length > 0 && inputValue.length < 3) ||
+    (maxValue && inputValue.length >= maxValue);
 
   useEffect(() => {
     const timeout = setTimeout(() => setIsAnimating(false), 1000);
@@ -41,8 +43,8 @@ export default function Form(props) {
       />
       <button
         type="submit"
-        className={`shared-form__btn ${minLength ? "btn-disabled" : ""}`}
-        disabled={minLength}
+        className={`shared-form__btn ${correctLength ? "btn-disabled" : ""}`}
+        disabled={correctLength}
       >
         {buttonContent}
       </button>
@@ -52,7 +54,8 @@ export default function Form(props) {
 
 Form.propTypes = {
   onSubmit: PropTypes.func.isRequired,
-  type: PropTypes.string,
   placeholder: PropTypes.string.isRequired,
   buttonContent: PropTypes.node.isRequired,
+  type: PropTypes.string,
+  maxValue: PropTypes.number,
 };
