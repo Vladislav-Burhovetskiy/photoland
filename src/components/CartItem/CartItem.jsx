@@ -10,14 +10,14 @@ export default function CartItem({ item }) {
 
   return (
     <div className="cart-item">
-      <Link to={`product/${item.id}`}>
+      <Link to={`/photoland/product/${item.id}`}>
         <div className="cart-item__image">
           <img src={item.image} alt={item.title} />
         </div>
       </Link>
       <div className="cart-item__details">
         <div className="cart-item__info">
-          <Link to={`product/${item.id}`}>
+          <Link to={`/photoland/product/${item.id}`}>
             <h3 className="cart-item__title">{item.title}</h3>
           </Link>
           <div>

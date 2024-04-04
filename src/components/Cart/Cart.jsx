@@ -1,4 +1,5 @@
 import PropTypes from "prop-types";
+import { v4 as uuidv4 } from 'uuid';
 import CartItem from "../CartItem/CartItem";
 import Modal from "../Modal/Modal";
 import { useCartContext } from "../../hooks/useCartContext";
@@ -11,7 +12,7 @@ import "./Cart.scss";
 
 export default function Cart() {
   const { toggleCart, cart, totalAmount, clearCart } = useCartContext();
-  const { user } = useLoginContext();
+  const { user } = useLoginContext() || {};
   const [modalIsOpen, toggleModal] = useToggle();
 
   function handleOrder() {
@@ -34,8 +35,8 @@ export default function Cart() {
         <div className="cart-close" onClick={() => toggleCart()}>
           <FiX />
         </div>
-        {cart.map((item) => (
-          <CartItem key={item.id} item={item} />
+        {cart?.map((item) => (
+          <CartItem key={uuidv4()} item={item} />
         ))}
       </div>
       <div className="cart-options">
