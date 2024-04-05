@@ -29,9 +29,16 @@ export default function CartItem({ item }) {
         </div>
         <div className="cart-item__qty-container">
           <Qty item={item} />
-          <p className="cart-item__price-subtotal">$ {item.price * item.amount}</p>
+          <p
+            className="cart-item__price-subtotal"
+            data-testid="item-total-price"
+          >
+            $ {item.price * item.amount}
+          </p>
         </div>
-        <p className="cart-item__price">${item.price} per piece</p>
+        <p className="cart-item__price" data-testid="item-price">
+          $ {item.price} per piece
+        </p>
       </div>
     </div>
   );
