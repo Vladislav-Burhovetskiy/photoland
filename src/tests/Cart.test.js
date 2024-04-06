@@ -21,11 +21,20 @@ describe("Cart item change quantity functionality", () => {
     return utils;
   };
 
-  test("increases quantity of an item in the cart", async () => {
+  test("Add an item to the cart", async () => {
     const { getByText } = setup();
 
     const addToCartButton = getByText("Add to cart");
     fireEvent.click(addToCartButton);
+
+    await waitFor(() => {
+      const quantityDisplay = getByText("1");
+      expect(quantityDisplay).toBeInTheDocument();
+    });
+  });
+
+  test("increases quantity of an item in the cart", async () => {
+    const { getByText } = setup();
 
     const increaseButton = getByText("+");
     fireEvent.click(increaseButton);
