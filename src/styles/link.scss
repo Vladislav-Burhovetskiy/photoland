@@ -3,10 +3,31 @@ a {
   font-weight: 500;
   text-decoration: inherit;
   border-bottom: 1px solid transparent;
-  transition: 0.3s;
+  transition: all 0.3s;
 }
 
 a:hover {
   border-color: $color-accent;
   color: $color-accent;
+}
+
+.link-button {
+  font-family: inherit;
+  font-size: 1em;
+  font-weight: 600;
+  color: $color-dark;
+  background-color: $color-accent;
+  padding: 12px 22px;
+  border-radius: 8px;
+  border: none;
+  transition: all 0.3s;
+}
+
+.link-button:hover {
+  box-shadow: inset 1px 1px 4px $color-light-dark;
+  color: $color-dark;
+}
+
+.link-button:active {
+  scale: 0.97;
 }

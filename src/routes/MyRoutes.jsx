@@ -6,6 +6,7 @@ import ProductDetails from "../pages/ProductDetails.jsx";
 import Search from "../pages/Search.jsx";
 import Filter from "../pages/Filter.jsx";
 import Login from "../pages/Login.jsx";
+import NotFoundPage from "../pages/NotFoundPage.jsx";
 
 export default function MyRoutes() {
   return (
@@ -17,6 +18,7 @@ export default function MyRoutes() {
         <Route path="search" element={<Search />} />
         <Route path="filter" element={<Filter />} />
         <Route path="login" element={<Login />} />
+        <Route path="*" element={<NotFoundPage />}/>
       </Route>
     </Routes>
   );
