@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Page Not Found</title>
+    <style>
+      body,
+      h1,
+      p {
+        margin: 0;
+        padding: 0;
+      }
+
+      .not-found {
+        height: 100vh;
+        background-color: #242424;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .container {
+        text-align: center;
+        max-width: 500px;
+        margin: 0 auto;
+      }
+
+      .not-found__icon {
+        color: #f6cd46;
+        font-size: 50px;
+        font-weight: bold;
+        margin-right: 5px;
+        margin-bottom: 20px;
+      }
+
+      .not-found__title {
+        color: rgba(255, 255, 255, 0.87);
+        margin-bottom: 30px;
+      }
+
+      .not-found__link {
+        font-family: inherit;
+        font-size: 1em;
+        font-weight: 600;
+        color: #1a1a1a;
+        background-color: #f6cd46;
+        padding: 12px 22px;
+        border-radius: 8px;
+        border: none;
+        text-decoration: none;
+        transition: all 0.3s;
+      }
+
+      .not-found__link:hover {
+        box-shadow: inset 1px 1px 4px #242424;
+      }
+
+      .not-found__link:active {
+        scale: 0.97;
+      }
+    </style>
+  </head>
+  <body>
+    <main class="not-found">
+      <div class="not-found container">
+        <p class="not-found__icon">404</p>
+        <h1 class="not-found__title">
+          Sorry, the page you were looking for was not found!
+        </h1>
+        <a
+          href="https://vladislav-burhovetskiy.github.io/photoland/"
+          class="not-found__link"
+        >
+          Return to home
+        </a>
+      </div>
+    </main>
+  </body>
+</html>
