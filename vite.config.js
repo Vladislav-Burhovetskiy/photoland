@@ -10,6 +10,7 @@ export default defineConfig({
     copy({
       targets: [
         { src: "api", dest: "dist", flatten: false },
+        { src: '404.html', dest: 'dist' },
       ],
       hook: "writeBundle",
     }),
