@@ -30,6 +30,7 @@ Fully responsive for 5 types of screen sizes from mobiles and tablets to a large
     - the avatar is replaced by the username;
     - if the name is longer than 9 characters, the last characters are replaced by "...";
     - the login button is replaced by logout;
+    - login | logout is made using LocalStorage;
     - logout immediately redirects to the login form page;
 
 5. The shopping cart:
@@ -39,6 +40,7 @@ Fully responsive for 5 types of screen sizes from mobiles and tablets to a large
     - if the user is not logged in, he will see a modal window about the need to log in before ordering;
     - you can also increase and decrease the quantity of the product, see the total amount of one product, delete the product or go to the detailed information of this product;
     - the total amount of goods is displayed on the cart icon;
+    - all information about products in the cart is stored in LocalStorage;
 
 6. Page 404 for non-existent routes:
     - one 404 page implemented in project routes;
