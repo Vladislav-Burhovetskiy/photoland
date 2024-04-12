@@ -50,15 +50,14 @@ Fully responsive for 5 types of screen sizes from mobiles and tablets to a large
     - updating the total amount of the product;
 
 
-### Quick start:
+## Quick start:
 
 ```
 $ npm install
 $ npm run dev
-
-PS:
-- Use node version >= 18
-- Check the current version with the node -v command
 ```
 
-Happy Coding!
+P.S. Use node version >= 18. You can check the current version using the command: node -v
+
+##
+### Happy Coding!
