@@ -14,9 +14,6 @@ export default function ProductDetails() {
   }
 
   const camera = findById(data, +id);
-  // const camera = data?.find((product) => {
-  //   return product.id === +id;
-  // });
 
   return (
     <div className="container">
