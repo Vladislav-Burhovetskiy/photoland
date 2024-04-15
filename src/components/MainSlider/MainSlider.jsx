@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination } from "swiper/modules";
 import "swiper/scss";
@@ -22,7 +23,12 @@ export default function MainSlider() {
               <p className="main-slider__text">{slide.titlePart1}</p>
               <p className="main-slider__text">{slide.titlePart2}</p>
               <p className="main-slider__text">{slide.titlePart3}</p>
-              <button className="main-slider__btn">SHOP NOW</button>
+              <Link
+                className="main-slider__link-btn link-button"
+                to="/photoland/discounts"
+              >
+                SHOP NOW
+              </Link>
             </div>
             <div className="main-slider__camera">
               <img src={slide.img} alt="Camera promo photo" />

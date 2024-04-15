@@ -53,10 +53,11 @@
     margin-bottom: -8px;
   }
 
-  &__btn {
-    position: relative;
-    margin-top: 40px;
+  &__link-btn {
+    position: absolute;
+    margin-top: 150px;
     z-index: 1;
+
 
     @include onLargeMobile {
       margin-top: 50px;

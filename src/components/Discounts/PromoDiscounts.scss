@@ -1,0 +1,50 @@
+@import "../../styles/utils.scss";
+
+.discounts {
+  position: relative;
+  height: 70vh;
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 0.5px solid $color-accent;
+  border-radius: 8px;
+  background: rgba(0, 0, 0, 0.45);
+  backdrop-filter: blur(2px);
+  padding: 0 25px;
+
+  &-icon {
+    color: $color-accent;
+    opacity: 0.8;
+  }
+
+  &-title__container {
+    display: flex;
+  }
+  
+  &-title {
+    font-size: 20px;
+    font-weight: 500;
+    color: $color-light;
+    text-transform: uppercase;
+    margin-bottom: 7px;
+    margin-right: 16px;
+  }
+
+  &-description {
+    margin-bottom: 30px;
+    opacity: 0.9;
+    text-align: center;
+  }
+
+  &-list {
+    display: grid;
+    grid-template-columns: auto auto;
+
+    &__term {
+      color: $color-accent;
+      margin-bottom: 20px;
+    }
+  }
+}

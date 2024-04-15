@@ -10,7 +10,7 @@ Fully responsive for 5 types of screen sizes from mobiles and tablets to a large
 1. Promotions and new products display page:
     - this is the main page that is displayed by default;
     - discounts that can be used in the shopping cart when ordering (not yet implemented);
-    - the promotions page is available only to logged-in users (not yet implemented);
+    - the discounts page is available only to logged-in users;
 
 2. Product details page:
     - detailed information about the product;
