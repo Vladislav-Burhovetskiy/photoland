@@ -44,7 +44,7 @@ export default function Header() {
           <SearchForm />
         </div>
         <div className="header-actions">
-          <Link to={"/photoland/login"}>
+          <Link to="/photoland/login">
             <button
               onClick={() => user && handleLogout()}
               className="header-btn"
