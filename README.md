@@ -9,7 +9,7 @@ Fully responsive for 5 types of screen sizes from mobiles and tablets to a large
 
 1. Promotions and new products display page:
     - this is the main page that is displayed by default;
-    - discounts that can be used in the shopping cart when ordering (not yet implemented);
+    - discounts that can be used in the shopping cart when ordering;
     - the discounts page is available only to logged-in users;
 
 2. Product details page:
@@ -59,7 +59,8 @@ $ npm install
 $ npm run dev
 ```
 
-P.S. Use node version >= 18. You can check the current version using the command: node -v
+P.S. Use node version >= 18. 
+Check the current version: node -v
 
 ##
 ### Happy Coding!
