@@ -7,7 +7,7 @@
     overflow-y: auto;
     overflow-x: hidden;
     scrollbar-color: $color-light-dark transparent;
-    height: 75vh;
+    height: 66vh;
   }
 
   &-close {
@@ -19,11 +19,27 @@
   &-options {
     padding: 15px 20px;
 
+    &__discount {
+      color: $color-light;
+      padding: 15px;
+      box-shadow: 0px 0px 1px $color-accent;
+      background: $color-dark;
+      margin-bottom: 10px;
+
+      &-amount {
+        display: flex;
+        justify-content: space-between;
+        font-size: 14px;
+        color: $color-accent;
+        margin-bottom: 10px;
+      }
+    }
+
     &__total {
       display: flex;
       justify-content: space-between;
       font-size: 20px;
-      margin-bottom: 10px;
+      // margin-bottom: 10px;
     }
 
     &__buttons {
@@ -50,4 +66,10 @@
       opacity: 0.05;
     }
   }
+}
+
+.line-through {
+  text-decoration-line: line-through;
+  text-decoration-color: $color-accent;
+  text-decoration-thickness: 0.5px;
 }

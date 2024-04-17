@@ -13,13 +13,13 @@ export default function PromoDiscounts() {
       </p>
       <dl className="discounts-list">
         <dt className="discounts-list__term">SAVE 35% ALL DSLR CAMERAS:</dt>
-        <dd className="discounts-list__definition">DSLR DISCOUNT</dd>
+        <dd className="discounts-list__definition">DSLR</dd>
         <dt className="discounts-list__term">
           SAVE 25% ALL MIRRORLESS CAMERAS:
         </dt>
-        <dd className="discounts-list__definition">MIRRORLESS DISCOUNT</dd>
+        <dd className="discounts-list__definition">MIRRORLESS </dd>
         <dt className="discounts-list__term">SAVE 20% ON YOUR FIRST ORDER:</dt>
-        <dd className="discounts-list__definition">FIRST ORDER DISCOUNT</dd>
+        <dd className="discounts-list__definition">FIRST ORDER </dd>
       </dl>
     </div>
   );

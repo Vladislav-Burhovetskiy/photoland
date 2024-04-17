@@ -24,7 +24,7 @@ export default function LoginForm() {
         type="text"
         placeholder="Your Username..."
         buttonContent="Login"
-        maxValue="16"
+        maxValue={16}
       />
     </div>
   );

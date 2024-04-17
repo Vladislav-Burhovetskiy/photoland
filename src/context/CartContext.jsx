@@ -4,6 +4,7 @@ import useToggle from "../hooks/useToggle";
 import {
   addToLocalStorage,
   getFromLocalStorage,
+  removeFromLocalStorage,
 } from "../helpers/localStorage.js";
 import findById from "../helpers/findById.js";
 
@@ -11,19 +12,43 @@ export const CartContext = createContext();
 
 export function CartProvider({ children }) {
   const [cartIsOpen, toggleCart] = useToggle();
-  const [cart, setCart] = useState(
-    getFromLocalStorage("cartItem") || []
-  );
+  const [cart, setCart] = useState(getFromLocalStorage("cartItem") || []);
   const [itemsAmount, setItemsAmount] = useState(0);
   const [totalAmount, setTotalAmount] = useState(0);
+  const [discountAmount, setDiscountAmount] = useState(0);
+  const [discount, setDiscount] = useState(
+    getFromLocalStorage("discount") || ""
+  );
 
   useEffect(() => {
-    const amount = cart.reduce((a, b) => a + b.amount, 0)
-    const totalPrice = cart.reduce((a, b) => a + (b.amount * b.price), 0);
-    setItemsAmount(amount)
+    const amount = cart.reduce((a, b) => a + b.amount, 0);
+
+    const discountPrice = cart.reduce(
+      (total, { amount, price, categories }) => {
+        let priceAmount = amount * price;
+
+        if (discount === "DSLR" && categories === "dslr") {
+          priceAmount *= 0.65;
+        } else if (discount === "MIRRORLESS" && categories === "mirrorless") {
+          priceAmount *= 0.75;
+        } else if (discount === "FIRST ORDER") {
+          priceAmount *= 0.8;
+        }
+
+        return total + priceAmount;
+      },
+      0
+    );
+
+    const totalPrice = cart.reduce((total, item) => {
+      return total + item.amount * item.price;
+    }, 0);
+
+    setItemsAmount(amount);
     setTotalAmount(totalPrice);
+    setDiscountAmount(totalPrice - discountPrice.toFixed());
     addToLocalStorage("cartItem", cart);
-  }, [cart]);
+  }, [cart, discount]);
 
   function addToCart(item) {
     const newItem = { ...item, amount: 1 };
@@ -51,13 +76,15 @@ export function CartProvider({ children }) {
     const existingItem = findById(cart, id);
     const existingItemIndex = cart.indexOf(existingItem);
     const updatedCart = [...cart];
-    
+
     updatedCart[existingItemIndex].amount += num;
     setCart(updatedCart);
   }
 
   function clearCart() {
-    setCart([])
+    setCart([]);
+    removeFromLocalStorage("discount");
+    setDiscount("");
   }
 
   return (
@@ -71,7 +98,10 @@ export function CartProvider({ children }) {
         updateAmount,
         clearCart,
         itemsAmount,
-        totalAmount
+        totalAmount,
+        discountAmount,
+        setDiscount,
+        discount,
       }}
     >
       {children}

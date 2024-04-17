@@ -1,17 +1,27 @@
 import PropTypes from "prop-types";
-import { v4 as uuidv4 } from 'uuid';
+import { v4 as uuidv4 } from "uuid";
 import CartItem from "../CartItem/CartItem";
 import Modal from "../Modal/Modal";
 import { useCartContext } from "../../hooks/useCartContext";
 import { useLoginContext } from "../../hooks/useLoginContext";
 import useToggle from "../../hooks/useToggle";
+import { addToLocalStorage } from "../../helpers/localStorage.js";
 import { FaCartShopping } from "react-icons/fa6";
 import { FaArrowRight } from "react-icons/fa6";
 import { FiX } from "react-icons/fi";
 import "./Cart.scss";
 
 export default function Cart() {
-  const { toggleCart, cart, totalAmount, clearCart } = useCartContext();
+  const {
+    toggleCart,
+    cart,
+    totalAmount,
+    discountAmount,
+    clearCart,
+    setDiscount,
+    discount,
+  } = useCartContext();
+
   const { user } = useLoginContext() || {};
   const [modalIsOpen, toggleModal] = useToggle();
 
@@ -19,9 +29,14 @@ export default function Cart() {
     if (user) {
       clearCart();
     }
-
     toggleModal();
     toggleCart();
+  }
+
+  function handlerDiscount(e) {
+    const discountValue = e.target.value.toUpperCase();
+    setDiscount(discountValue);
+    addToLocalStorage("discount", discountValue);
   }
 
   const modalTitle = user ? "Ordered Successfully!" : "Login first!";
@@ -40,9 +55,20 @@ export default function Cart() {
         ))}
       </div>
       <div className="cart-options">
+        <input
+          type="text"
+          className="cart-options__discount"
+          placeholder="ENTER DISCOUNT"
+          onChange={(e) => handlerDiscount(e)}
+          value={discount}
+        />
         <div className="cart-options__total">
           <p>Total:</p>
-          <p>$ {totalAmount}</p>
+          <p className={discountAmount && "line-through"}>$ {totalAmount}</p>
+        </div>
+        <div className="cart-options__discount-amount">
+          <p>discount: - ${discountAmount}</p>
+          <p>$ {totalAmount - discountAmount}</p>
         </div>
         {cart.length ? (
           <div className="cart-options__buttons">
@@ -61,7 +87,7 @@ export default function Cart() {
         ) : (
           <div>
             <FaCartShopping className="cart-options__empty" />
-            <p>Your cart is empty...</p>
+            <p className="cart-options__empty-text">Your cart is empty...</p>
           </div>
         )}
       </div>
