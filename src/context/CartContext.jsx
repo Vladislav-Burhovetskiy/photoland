@@ -6,6 +6,7 @@ import {
   getFromLocalStorage,
   removeFromLocalStorage,
 } from "../helpers/localStorage.js";
+import priceCounter from "../helpers/priceCounter.js";
 import findById from "../helpers/findById.js";
 
 export const CartContext = createContext();
@@ -22,27 +23,8 @@ export function CartProvider({ children }) {
 
   useEffect(() => {
     const amount = cart.reduce((a, b) => a + b.amount, 0);
-
-    const discountPrice = cart.reduce(
-      (total, { amount, price, categories }) => {
-        let priceAmount = amount * price;
-
-        if (discount === "DSLR" && categories === "dslr") {
-          priceAmount *= 0.65;
-        } else if (discount === "MIRRORLESS" && categories === "mirrorless") {
-          priceAmount *= 0.75;
-        } else if (discount === "FIRST ORDER") {
-          priceAmount *= 0.8;
-        }
-
-        return total + priceAmount;
-      },
-      0
-    );
-
-    const totalPrice = cart.reduce((total, item) => {
-      return total + item.amount * item.price;
-    }, 0);
+    const discountPrice = priceCounter(cart, discount);
+    const totalPrice = priceCounter(cart)
 
     setItemsAmount(amount);
     setTotalAmount(totalPrice);
