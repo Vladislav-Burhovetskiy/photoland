@@ -1,0 +1,20 @@
+@import "../../styles/utils.scss";
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+
+  &-btn {
+    padding: 6px 14px;
+
+    &:not(:last-child) {
+      margin-right: 10px;
+    }
+  }
+}
+
+.active-btn {
+  box-shadow: inset 1px 1px 4px $color-light-dark;
+  scale: 0.97;
+}
