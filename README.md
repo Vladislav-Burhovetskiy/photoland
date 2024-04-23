@@ -22,7 +22,7 @@ Fully responsive for 5 types of screen sizes from mobiles and tablets to a large
     - navigation by product categories;
     - search by product brand name;
     - filter by product price;
-    - pagination if there are more than 6 products on the page (not yet implemented);
+    - pagination if there are more than 6 products on the page;
 
 4. Login / logout:
     - an empty form causes a shake and does not allow sending data;

@@ -1,6 +1,7 @@
 import PropTypes from "prop-types";
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import { usePaginationContext } from "../../hooks/usePaginationContext";
 import {
   addToLocalStorage,
   getFromLocalStorage,
@@ -9,6 +10,7 @@ import {
 import "./FilterByPrice.scss";
 
 export default function FilterByPrice({ closeMenu }) {
+  const { setCurrentPage } = usePaginationContext();
   const [selectedPrice, setSelectedPrice] = useState(
     getFromLocalStorage("filter") || ""
   );
@@ -18,6 +20,7 @@ export default function FilterByPrice({ closeMenu }) {
     const selectedValue = e.target.value;
     addToLocalStorage("filter", selectedValue);
     setSelectedPrice(selectedValue);
+    setCurrentPage(1);
 
     selectedValue
       ? navigate(`/photoland/filter?${selectedValue}`)
@@ -27,7 +30,7 @@ export default function FilterByPrice({ closeMenu }) {
   };
 
   useEffect(() => {
-      removeFromLocalStorage("filter");
+    removeFromLocalStorage("filter");
   }, [selectedPrice]);
 
   return (

@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import "./Pagination.scss";
 
 export default function Pagination(props) {

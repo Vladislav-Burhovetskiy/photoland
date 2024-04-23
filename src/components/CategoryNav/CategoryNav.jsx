@@ -28,7 +28,7 @@ export default function CategoryNav({ closeMenu }) {
         ))}
       </div>
       <div className="nav-filter">
-        <FilterByPrice closeMenu={closeMenu}/>
+        <FilterByPrice closeMenu={closeMenu} />
       </div>
     </aside>
   );

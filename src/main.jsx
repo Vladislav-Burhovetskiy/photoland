@@ -4,6 +4,7 @@ import App from "./App.jsx";
 import { DataProvider } from "./context/DataContext.jsx";
 import { CartProvider } from "./context/CartContext.jsx";
 import { LoginProvider } from "./context/LoginContext.jsx";
+import { PaginationProvider } from "./context/PaginationContext.jsx";
 import "./index.scss";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
@@ -11,7 +12,9 @@ ReactDOM.createRoot(document.getElementById("root")).render(
     <DataProvider>
       <LoginProvider>
         <CartProvider>
-          <App />
+          <PaginationProvider>
+            <App />
+          </PaginationProvider>
         </CartProvider>
       </LoginProvider>
     </DataProvider>
