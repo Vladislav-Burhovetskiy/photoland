@@ -11,13 +11,15 @@ export default function Modal({ title, text, toggleModal, authLink }) {
       <div className="modal-info">
         <h3 className="modal-title">{title}</h3>
         <p className="modal-text">{text}</p>
-        <Link
-          className="modal-close"
-          onClick={toggleModal}
-          to={authLink}
-        >
-          <FiX className="modal-close__btn" />
-        </Link>
+        {authLink ? (
+          <Link className="modal-close" onClick={toggleModal} to={authLink}>
+            <FiX className="modal-close__btn" />
+          </Link>
+        ) : (
+          <div className="modal-close" onClick={toggleModal}>
+            <FiX className="modal-close__btn" />
+          </div>
+        )}
       </div>
     </div>,
     DOMElement
